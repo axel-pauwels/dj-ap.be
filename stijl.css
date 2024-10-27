@@ -9,7 +9,6 @@ body {
     background-image: url("DJ AP-front foto.jpg");
     background-size: cover;
     background-position: center top;
-    background-position: center calc(-12rem);
     background-repeat: no-repeat;
     position: relative;
 }
