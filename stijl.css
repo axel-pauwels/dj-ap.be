@@ -28,7 +28,7 @@ body::before {
     font-weight: bold;
     font-style: italic;
     font-size: 6vw; /* Tekstgrootte gebaseerd op viewport breedte */
-    color: white;
+    color: red;
     position: relative;
     z-index: 2; /* Zorgt ervoor dat de tekst boven de overlay staat */
     text-align: center; /* Centreer de tekst */
