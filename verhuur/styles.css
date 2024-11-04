@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
-    height: 4rem;
+    height: 5rem;
 }
 
 header h1 {
@@ -30,7 +30,7 @@ header h1 {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Ruimte tussen de lijnen */
+    gap: 7px; /* Ruimte tussen de lijnen */
     z-index: 15; /* Zodat het bovenop andere elementen zit */
 }
 
@@ -40,11 +40,12 @@ header h1 {
     height: 3px;
     background-color: #FFF;
     transition: 0.4s;
+    transform: scale(1.5);
 }
 
 /* Hamburger verandert in een X */
 .change .bar1 {
-    transform: translateY(8px) rotate(-45deg);
+    transform: translateY(10.25px) rotate(-45deg) scale(1.5);
 }
 
 .change .bar2 {
@@ -52,8 +53,10 @@ header h1 {
 }
 
 .change .bar3 {
-    transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-10.25px) rotate(45deg) scale(1.5);
 }
+
+
 
 /* Stijl voor popup menu rechts */
 #hamburger-menu {
@@ -168,6 +171,7 @@ header h1 {
 .gallery {
     position: relative;
     width: 100%;
+    margin: 0 3rem;
     max-width: 480px;
     height: calc(480px * 0.75); /* Verhouding van 4:3 */
     overflow: hidden; 
@@ -264,13 +268,30 @@ header h1 {
 
 @media (max-width: 1300px) {
 
+    header h1 {
+        padding: 0;
+        font-size: 45px;
+    }
+
     .gallery {
-        max-width: 50%;
+        max-width: 35%;
+        margin: 0 3rem;
     }
 }
 
 
 @media (max-width: 985px) {
+
+    header h1 {
+        padding: 0;
+        font-size: 40px;
+    }
+
+    .containerProducten {
+        max-width: 80%;
+        padding: 5%;
+    }
+
     .product {
         flex-direction: column;
         align-items: center;
@@ -279,5 +300,30 @@ header h1 {
 
     .gallery {
         max-width: 70%;
+    }
+
+    .gallery {
+        margin: 0 1rem;
+        max-width: 480px;
+        height: calc(480px * 0.75);
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    header h1 {
+        padding: 0;
+        font-size: 25px;
+    }
+
+    .containerProducten {
+        max-width: 100%;
+        padding: 5%;
+    }
+
+    .gallery {
+        max-width: 100%;
     }
 }
