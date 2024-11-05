@@ -1,0 +1,451 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'CoFo Sans', sans-serif;
+    background-color: #FFF;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 20px 1rem 30px;
+    background-color: black;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+.logo a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-size: 1.75em;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1vw;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    font-family: Ubuntu;
+    font-style: bold;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+
+
+
+body {
+    margin-top: 6.5rem;
+}
+
+/* Stijl voor de link rondom het logo */
+.logo a {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 120px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
+}
+  
+  /* Stijl voor de afbeelding zelf */
+.logo a img {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
+}
+  
+.algemeneVoorwaarden a{
+    font-style: italic;
+}
+
+.containerProducten {
+    max-width: 80vw;
+    margin: 2rem auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.containerProducten h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-bottom: .75rem;
+    font-family: Ubuntu;
+}
+
+.product {
+    display: flex;
+    gap: 2rem;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin: 1rem ;
+}
+
+.product:last-of-type {
+    border-bottom: none;
+}
+
+.product-info .prijs {
+    margin: .8rem 0 0 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.specificaties {
+    margin: 4rem 0 0 0;
+    font-weight: bold;
+}
+
+.product-info {
+    flex-grow: 1;
+    font-family: sans-serif;
+}
+
+.product-info a {
+    text-decoration: none;       /* Verwijdert standaard onderstreping */
+    color: #444;
+    font-size: 1.4em;
+    margin: 0 0 30px;
+    font-weight: 600;
+}
+
+
+.product-info a:hover {
+    text-decoration: underline;  /* Onderstreping bij hover */
+}
+
+.product-info p {
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+}
+
+.product:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.inbegrepen, .aantalBeschikbaar span {
+    font-weight: 600;
+    margin-top: 5rem;
+}
+
+.prijs, .specificaties, .inbegrepen, .aantalBeschikbaar span {
+    font-family: Ubuntu;
+}
+
+
+
+/* Container van de galerij */
+.gallery {
+    position: relative;
+    width: 100%;
+    margin: 0 3rem;
+    max-width: 480px;
+    height: calc(480px * 0.75); /* Verhouding van 4:3 */
+    overflow: hidden; 
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stijl voor de galerijafbeeldingen */
+.gallery-image {
+    position: absolute; /* Zorg ervoor dat alle afbeeldingen op elkaar worden gestapeld */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Zorg voor een vloeiende overgang */
+}
+
+/* Toon de actieve afbeelding */
+.gallery-image.active {
+    opacity: 1;
+    position: relative; /* Hierdoor verschijnt de actieve afbeelding bovenop */
+}
+
+/* Navigatieknoppen */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    z-index: 10; /* Zodat knoppen boven afbeeldingen blijven */
+}
+
+.gallery-nav.prev {
+    left: 10px;
+}
+
+.gallery-nav.next {
+    right: 10px;
+}
+
+.gallery-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.containerProducten li {
+    list-style-type:disc;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    font-family: ubuntu;
+}
+
+
+/* Stijling voor de "Naar boven" knop */
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;  /* Start als verborgen */
+    font-size: 14px;
+    z-index: 1000;  /* Zodat het boven de andere elementen verschijnt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Maak de knop zichtbaar wanneer de gebruiker heeft gescrolld */
+.to-top.visible {
+    display: block;
+}
+
+/* Verander de kleur bij hover */
+.to-top:hover {
+    background-color: #555;
+}
+
+
+/* Stijl voor de footer */
+footer {
+    width: 100%;
+    padding: 1rem 0;               /* Voeg padding toe voor ruimte boven/onder de knoppen */
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: 'CoFo Sans', sans-serif;
+}
+
+/* Flexbox-instellingen voor de knoppen in de footer */
+.footer-buttons {
+    display: flex;
+    gap: 15px;                     /* Ruimte tussen de knoppen */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-button {
+    padding: 10px 20px;            /* Ruime padding voor grotere klikbare zones */
+    color: #FFF;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #555;        /* Verander achtergrondkleur bij hover */
+}
+
+/* Zorg ervoor dat tekst in de knoppen gecentreerd is */
+.footer-button span {
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1300px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery {
+        max-width: 35%;
+        margin: 0 3rem;
+    }
+}
+
+
+@media (max-width: 985px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .containerProducten {
+        max-width: 80%;
+        padding: 5%;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .gallery {
+        max-width: 70%;
+        margin: 0 1rem;
+        max-width: 480px;
+        height: calc(480px * 0.75);
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .containerProducten {
+        max-width: 100%;
+        padding: 5%;
+    }
+
+    .gallery {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    /* Toon de navigatielinks */
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    /* Verberg het hamburger menu */
+    .hamburger {
+        display: none;
+    }
+
+    /* Zorg dat de logo links staat en navigatielinks rechts */
+    header {
+        justify-content: space-between;
+    }
+}
+
+/* Media query voor kleinere schermen */
+@media (max-width: 767px) {
+    /* Logo centreren */
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Uitlijnen hamburger icon naar rechts */
+    .hamburger {
+        position: absolute;
+        right: 20px;
+    }
+
+    /* Open het menu als het actief is */
+    .nav-links.active {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 300px;
+        background-color: #333;
+        padding: 0 0;
+        text-align: right;
+        border-radius: 4px 0 0 6px;
+        box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
+    }
+
+    
+    .nav-links li {
+        z-index: 50;
+        padding: 10px 20px;
+        border-bottom: 1px solid #444;
+    }
+    
+    .nav-links li:last-of-type {
+        border-bottom: none;
+    }
+
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1px;
+    }
+}
