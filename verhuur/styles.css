@@ -43,23 +43,40 @@ body {
     margin-top: 6.5rem;
 }
 
-/* Stijl voor de link rondom het logo */
-.logo a {
-    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
-    width: 120px;          /* Breedte van het logo */
-    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
-    text-align: center;    /* Centreert de inhoud in de link */
+
+
+.logo1 a {
+    display: block;
+    width: 120px;
+    height: auto;
+    text-align: center;
+}
+
+.logo1 a img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo1 {
+    margin: 0 auto;
+}
+
+.logo2 a {
+    display: block;
+    width: auto;
+    height: 57.41px;
+    text-align: center;
 }
   
-  /* Stijl voor de afbeelding zelf */
-.logo a img {
-    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
-    height: auto;          /* Behoudt de aspect ratio */
-    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
+.logo2 a img {
+    max-height: 100%;
+    height: auto;
+    display: block;
 }
 
 
-.logo {
+.logo2 {
     margin: 0 auto;
 }
 

@@ -166,56 +166,6 @@ body {
     text-decoration: underline;  /* Onderstreping bij hover */
 }
 
-
-
-
-
-
-.product-info a.hoverLinkFabrikant {
-    position: relative;
-    cursor: pointer;
-  }
-
-  /* Verborgen hoverLinkFabrikant-stijlen */
-.product-info a.hoverLinkFabrikant .hoverLinkFabrikant-text {
-    visibility: hidden;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 50;
-    top: 125%;
-    left: 70%;
-    transform: translateX(-70%);
-    white-space: nowrap;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-    font-size: 15px;
-}
-
-  /* Pijltje onder de hoverLinkFabrikant */
-.product-info a.hoverLinkFabrikant .hoverLinkFabrikant-text::after {
-    content: "";
-    position: absolute;
-    bottom: 100%; /* Plaatsing boven de tooltip */
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
-  }
-
-  /* hoverLinkFabrikant zichtbaar maken bij hover */
- .product-info a.hoverLinkFabrikant:hover .hoverLinkFabrikant-text {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  
-
-
 .product-info p {
     line-height: 1.6;
     margin: 10px 0 0 0;
@@ -227,21 +177,17 @@ body {
 }
 
 
-.inbegrepen, .aantalBeschikbaar span {
+.inbegrepen, .combineerbaar {
     font-weight: 600;
     margin-top: 5rem;
 }
 
-.prijs, .binnekortBeschikbaar, .specificaties, .inbegrepen, .aantalBeschikbaar span {
-    font-family: Ubuntu;
+.combineerbaar{
+    font-weight: 100;
 }
 
-.binnekortBeschikbaar {
-    font-style: italic;
-    margin: .8rem 0 0 0;
-    font-weight: bold;
-    font-size: 18px;
-    color: #666;
+.prijs, .specificaties, .inbegrepen, .combineerbaar {
+    font-family: Ubuntu;
 }
 
 
@@ -250,9 +196,9 @@ body {
 .gallery {
     position: relative;
     width: 100%;
-    margin: 0 3rem;
-    max-width: 480px;
-    height: calc(480px * 0.75); /* Verhouding van 4:3 */
+    margin: 0 0;
+    max-width: 500px;
+    height: calc(500px * 0.75); /* Verhouding van 4:3 */
     overflow: hidden; 
     border-radius: 5px;
     background-color: #fff;
@@ -293,19 +239,6 @@ body {
     border-radius: 3px;
     z-index: 10; /* Zodat knoppen boven afbeeldingen blijven */
 }
-
-.gallery-nav.prev {
-    left: 10px;
-}
-
-.gallery-nav.next {
-    right: 10px;
-}
-
-.gallery-nav:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
 
 .containerProducten li {
     list-style-type:disc;
