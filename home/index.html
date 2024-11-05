@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="stijl.css">
+	<script src="script.js" defer></script>
+	<link rel="icon" type="image/x-icon" href="DJAP_logo1-wit-op-zwart.ico">
+	<title>DJ AP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="images/DJAP_logo1-wit-CROPPED.png" alt="">
+            </a>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="#">GELUID</a></li>
+                <li><a href="#">GELUIDSSETS</a></li>
+                <li><a href="../verhuur/licht/index.html">LICHT</a></li>
+                <li><a href="#">LICHTSSETS</a></li>
+                <li><a href="#">SFX</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+	<div id="fotos">
+		<!-- Eerste rij met afbeeldingen (maximaal 4) en knoppen eronder -->
+		<div class="foto-row eerste-rij">
+			<img src="images/DJAPDVJ-5.jpg" alt="DJAPDVJ-5" class="HOMEAfbeelding43" onclick="openModal(this)">
+			<img src="images/DJAPDVJ-15.jpg" alt="DJAPDVJ-15" class="HOMEAfbeelding43" onclick="openModal(this)">
+			<img src="images/DJAPDVJ-14.jpg" alt="DJAPDVJ-14" class="HOMEAfbeelding43" onclick="openModal(this)">
+			<img src="images/DJAPDVJ-6.jpg" alt="DJAPDVJ-6" class="HOMEAfbeelding43" onclick="openModal(this)">
+		</div>
+	
+		<div id="contact-buttons">
+			<button class="contact-btn">Contact 1</button>
+			<button class="contact-btn">Contact 2</button>
+			<button class="contact-btn">Contact 3</button>
+		</div>
+	
+		<!-- Tweede rij met overige afbeeldingen -->
+		<div class="extra-fotos">
+			<img src="images/DJAP-17-05-10-15.png" alt="DJAP Extra 1" class="HOMEAfbeelding34" onclick="openModal(this)">
+			<img src="images/DJAP-17-05-10-14.png" alt="DJAP Extra 1" class="HOMEAfbeelding34" onclick="openModal(this)">
+			<img src="images/IMG_7338.jpg" alt="DJAP Extra 1" class="HOMEAfbeelding34" onclick="openModal(this)">
+			<img src="images/DJAP-17-05-10-15.png" alt="DJAP Extra 1" class="HOMEAfbeelding34" onclick="openModal(this)">
+			<img src="images/IMG_0156-08.jpg" alt="DJAPDVJ-5" class="HOMEAfbeelding43" onclick="openModal(this)">
+			<img src="images/DJ AP PRESS-PIC_24-2.jpg" alt="DJAPDVJ-5" class="HOMEAfbeelding43" onclick="openModal(this)">
+			<img src="images/DJAPDVJ-5.jpg" alt="DJAPDVJ-5" class="HOMEAfbeelding43" onclick="openModal(this)">
+			<img src="images/DJAPDVJ-5.jpg" alt="DJAPDVJ-5" class="HOMEAfbeelding43" onclick="openModal(this)">
+
+		</div>
+	</div>
+	
+
+	<!-- Modal voor de grote afbeelding -->
+	<div id="modal" onclick="closeModal()">
+		<span id="close-btn">&times;</span>
+		<img id="modal-img" alt="Grote weergave afbeelding">
+	</div>
+
+
+
+	<div id="materiaal"></div>
+
+
+</body>
+
+	<footer>
+		<div class="footer-buttons">
+			<a href="contact.html" class="footer-button" id="contact-button">
+				<span>CONTACT</span>
+			</a>
+			<a href="../verhuur/algemene-voorwaarden/index.html" class="footer-button" id="voorwaarden-button">
+				<span>ALGEMENE VOORWAARDEN</span>
+			</a>
+			<a href="over-ons.html" class="footer-button" id="over-ons-button">
+				<span>OVER ONS</span>
+			</a>
+		</div>
+	</footer>
+</html>
