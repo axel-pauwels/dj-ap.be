@@ -6,15 +6,13 @@ body {
     background-color: #FFF;
 }
 
-
 body, html {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
 
 header {
     display: flex;
@@ -28,7 +26,6 @@ header {
     width: 100%;
     z-index: 15;
 }
-
 
 .nav-links {
     display: none;
@@ -64,27 +61,21 @@ header {
     background-color: #fff;
 }
 
-
-
-
 body {
     margin-top: 6.5rem;
 }
 
-/* Stijl voor de link rondom het logo */
 .logo1 a {
     display: block;
     width: 120px;
     height: auto;
 }
-  
+
 .logo1 a img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-
-
 
 .logo2 a {
     padding-left: 2.25rem;
@@ -93,28 +84,24 @@ body {
     width: auto;
 }
 
-
 .logo2 a img {
     max-height: 100%;
     width: auto;
     display: block;
 }
 
-
-  
-.algemeneVoorwaarden a{
+.algemeneVoorwaarden a {
     font-style: italic;
 }
 
 .containerProducten {
-    max-width: 80vw;
+    width: 70vw;
     margin: 2rem auto;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
 }
-
 
 .containerProducten h2 {
     color: #333;
@@ -131,7 +118,7 @@ body {
     gap: 2rem;
     padding: 20px;
     border-bottom: 1px solid #ddd;
-    margin: 1rem ;
+    margin: 1rem;
 }
 
 .product:last-of-type {
@@ -139,12 +126,12 @@ body {
 }
 
 .product-info .prijs {
-    margin: .8rem 0 0 0;
+    margin: .2rem 0 0 0;
     font-weight: bold;
     font-size: 18px;
 }
 
-.specificaties {
+.setBevat {
     margin: 4rem 0 0 0;
     font-weight: bold;
 }
@@ -152,32 +139,36 @@ body {
 .product-info {
     flex-grow: 1;
     font-family: sans-serif;
+    max-width: 50%;
 }
 
-.product-info a {
-    text-decoration: none;       /* Verwijdert standaard onderstreping */
+.setBevatExtraMarge {
+    margin-top: 1rem;
+}
+
+.product-info a, .naamProduct {
     color: #444;
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin: 0 0 30px;
     font-weight: 600;
 }
 
-
 .product-info a:hover {
-    text-decoration: underline;  /* Onderstreping bij hover */
+    text-decoration: underline; /* Onderstreping bij hover */
 }
 
-
-
-
-
+.product-info a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
 
 .product-info a.hoverLinkFabrikant {
     position: relative;
     cursor: pointer;
-  }
+}
 
-  /* Verborgen hoverLinkFabrikant-stijlen */
 .product-info a.hoverLinkFabrikant .hoverLinkFabrikant-text {
     visibility: hidden;
     background-color: #555;
@@ -196,26 +187,21 @@ body {
     font-size: 15px;
 }
 
-  /* Pijltje onder de hoverLinkFabrikant */
 .product-info a.hoverLinkFabrikant .hoverLinkFabrikant-text::after {
     content: "";
     position: absolute;
-    bottom: 100%; /* Plaatsing boven de tooltip */
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent black transparent;
-  }
+}
 
-  /* hoverLinkFabrikant zichtbaar maken bij hover */
- .product-info a.hoverLinkFabrikant:hover .hoverLinkFabrikant-text {
+.product-info a.hoverLinkFabrikant:hover .hoverLinkFabrikant-text {
     visibility: visible;
     opacity: 1;
-  }
-
-  
-
+}
 
 .product-info p {
     line-height: 1.6;
@@ -227,14 +213,18 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-.inbegrepen, .aantalBeschikbaar span {
+.specificaties {
     font-weight: 600;
     margin-top: 5rem;
 }
 
-.prijs, .binnekortBeschikbaar, .specificaties, .inbegrepen, .aantalBeschikbaar span {
+.prijs, .binnekortBeschikbaar, .setBevat, .specificaties, .combineerbaar {
     font-family: Ubuntu;
+}
+
+.combineerbaar {
+    font-weight: 500;
+    font-style: italic;
 }
 
 .binnekortBeschikbaar {
@@ -245,16 +235,13 @@ body {
     color: #666;
 }
 
-
-
-/* Container van de galerij */
+/* Galerij container */
 .gallery {
     position: relative;
     width: 100%;
-    margin: 0 3rem;
-    max-width: 480px;
-    height: calc(480px * 0.75); /* Verhouding van 4:3 */
-    overflow: hidden; 
+    max-width: 600px;  /* Max breedte op desktops */
+    margin: 0 auto;
+    overflow: hidden;
     border-radius: 5px;
     background-color: #fff;
     display: flex;
@@ -262,22 +249,23 @@ body {
     justify-content: center;
 }
 
-/* Stijl voor de galerijafbeeldingen */
+/* Galerij afbeeldingen */
 .gallery-image {
-    position: absolute; /* Zorg ervoor dat alle afbeeldingen op elkaar worden gestapeld */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
     object-fit: contain;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Zorg voor een vloeiende overgang */
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Toon de actieve afbeelding */
 .gallery-image.active {
     opacity: 1;
-    position: relative; /* Hierdoor verschijnt de actieve afbeelding bovenop */
+    position: relative;
 }
 
 /* Navigatieknoppen */
@@ -292,7 +280,7 @@ body {
     padding: 10px;
     cursor: pointer;
     border-radius: 3px;
-    z-index: 10; /* Zodat knoppen boven afbeeldingen blijven */
+    z-index: 10;
 }
 
 .gallery-nav.prev {
@@ -307,13 +295,16 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 .containerProducten li {
-    list-style-type:disc;
+    width: 50vw;
+    list-style-type: disc;
     margin-left: 1rem;
     margin-top: .5rem;
     font-family: ubuntu;
 }
+
+
+
 
 
 /* Stijling voor de "Naar boven" knop */
@@ -345,10 +336,22 @@ body {
 }
 
 
+
+
+
+/* Responsieve aanpassingen */
+@media (max-width: 600px) {
+    .gallery {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
 /* Stijl voor de footer */
 footer {
     width: 100%;
-    padding: 1rem 0;               /* Voeg padding toe voor ruimte boven/onder de knoppen */
+    padding: 1rem 0;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -357,16 +360,15 @@ footer {
     font-family: 'CoFo Sans', sans-serif;
 }
 
-/* Flexbox-instellingen voor de knoppen in de footer */
 .footer-buttons {
     display: flex;
-    gap: 15px;                     /* Ruimte tussen de knoppen */
+    gap: 15px;
     justify-content: center;
     align-items: center;
 }
 
 .footer-button {
-    padding: 10px 20px;            /* Ruime padding voor grotere klikbare zones */
+    padding: 10px 20px;
     color: #FFF;
     background-color: #333;
     border-radius: 5px;
@@ -376,143 +378,99 @@ footer {
 }
 
 .footer-button:hover {
-    background-color: #555;        /* Verander achtergrondkleur bij hover */
+    background-color: #555;
 }
 
-/* Zorg ervoor dat tekst in de knoppen gecentreerd is */
 .footer-button span {
     display: inline-block;
     text-align: center;
 }
 
 
+/* Media Queries */
 
 @media (max-width: 1300px) {
-
     header h1 {
         font-size: 2.5rem;
     }
-
     .gallery {
         max-width: 35%;
         margin: 0 3rem;
     }
-}
-
-
-@media (max-width: 985px) {
-
     header h1 {
         font-size: 2rem;
     }
-
     .containerProducten {
         max-width: 80%;
         padding: 5%;
     }
-
     .product {
         flex-direction: column;
         align-items: center;
         text-align: left;
     }
-    
     .gallery {
         max-width: 70%;
         margin: 0 1rem;
         max-width: 480px;
         height: calc(480px * 0.75);
     }
-
     .logo1 img {
         height: 40px;
     }
 
-
+    .product-info {
+        max-width: 100%;
+    }
 }
 
-
 @media (max-width: 450px) {
-
     header h1 {
         font-size: 2rem;
     }
-
     .containerProducten {
         max-width: 100%;
         padding: 5%;
     }
-
     .gallery {
         max-width: 100%;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* Grote schermen (min-width: 1100px) */
 @media (min-width: 1100px) {
-    /* Toon de navigatielinks */
     .nav-links {
         display: flex;
         justify-content: flex-end;
         flex-grow: 1;
     }
-
-    /* Verberg het hamburger menu */
     .hamburger {
         display: none;
     }
-
-    /* Zorg dat de logo links staat en navigatielinks rechts */
     header {
         justify-content: center;
     }
 }
 
-/* Media query voor kleinere schermen */
+/* Kleinere schermen (max-width: 1099px) */
 @media (max-width: 1099px) {
-    /* Logo centreren */
     .logo1, .logo2 {
         margin: 0 auto;
     }
-
     .logo1 a {
         width: 65px;
     }
-    
     .logo2 a {
         height: 25px;
     }
-
     .logo1 a, .logo1 a img, .logo2 a, .logo2 a img {
         padding: 0;
         margin: 0;
     }
-
-
-
-
-
-
-
-
-
-    /* Uitlijnen hamburger icon naar rechts */
     .hamburger {
         position: absolute;
         right: 20px;
     }
-
-    /* Open het menu als het actief is */
     .nav-links.active {
         display: block;
         position: fixed;
@@ -525,19 +483,14 @@ footer {
         border-radius: 4px 0 0 6px;
         box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
     }
-
-    
     .nav-links li {
         z-index: 50;
         padding: 10px 20px;
         border-bottom: 1px solid #444;
     }
-    
     .nav-links li:last-of-type {
         border-bottom: none;
     }
-
-
     .nav-links ul {
         flex-direction: column;
         gap: 1px;
