@@ -1,0 +1,307 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'CoFo Sans', sans-serif;
+    background-color: #FFF;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 20px 1rem 30px;
+    background-color: black;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+
+.nav-links {
+    display: none;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1vw;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    font-family: Ubuntu;
+    font-style: bold;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+
+
+
+body {
+    margin-top: 6.5rem;
+}
+
+/* Stijl voor de link rondom het logo */
+.logo2 {
+    display: flex;
+    justify-content: center; /* Centreert het logo */
+}
+
+.logo2 a {
+    display: block;
+    height: 57.41px;
+    width: auto;
+}
+
+.logo2 img {
+    max-height: 100%;
+    width: auto;
+}
+
+.container {
+    min-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    font-family: Ubuntu;
+    font-weight: 500;
+}
+
+h2 {
+    color: #444;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+
+.containerInfo {
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    font-family: Ubuntu;
+    margin-bottom: 5rem;
+}
+
+/* Stijl voor elke paragraaf binnen containerInfo */
+.containerInfo p {
+    color: #555;
+    margin: 8px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.6rem;
+}
+
+
+
+/* Flex container voor alle sections, aangepast naar maximaal 70% breedte */
+.sections-container {
+    display: grid;
+    gap: 20px; /* Ruimte tussen de sections */
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Maximaal 3 kolommen */
+    max-width: 70%; /* Maximum breedte van 70% */
+    margin: 0 auto; /* Centraal uitlijnen */
+}
+
+/* Stijlen voor de section en het ul-element */
+.section {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Ubuntu;
+    background-color: #fff;
+}
+/* Stijlen voor de section titels */
+.section h2 {
+    text-align: center;
+    color: #444;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Stijlen voor de ul-lijst binnen de section */
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stijlen voor li en a */
+.section li {
+    margin-bottom: 8px; /* Ruimte tussen items */
+    padding: 6px;
+}
+
+.section li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: white;
+    border-radius: 4px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.section li a:hover {
+    text-decoration: underline;
+    color: #222;
+}
+
+
+
+
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+}
+
+.to-top.visible {
+    display: block;
+}
+
+.to-top:hover {
+    background-color: #555;
+}
+
+
+
+/* Responsive opmaak */
+@media only screen and  (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and  (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1142px){
+    .containerInfo {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    .containerInfo {
+        width: 80%;
+    }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    .containerInfo {
+        width: 90%;
+    }
+    
+    .logo2 a {
+        height: 7vw; /* Pas de hoogte aan voor een kleiner logo */
+    }
+    .logo2 {
+        display: flex;
+        justify-content: center; /* Zorgt ervoor dat het logo in het midden staat */
+    }
+    .containerInfo {
+        width: 95%;
+    }
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .logo2 {
+        display: flex;
+        justify-content: center;
+    }
+    .logo2 a {
+        height: 31px; /* Pas de hoogte aan voor een kleiner logo */
+    }
+}
