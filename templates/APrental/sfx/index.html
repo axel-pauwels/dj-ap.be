@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Rental - Licht</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='APrental/sfx/styles.css') }}">
+    
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/DJAP_logo1-wit-op-zwart.ico') }}">
+	<script src="{{ url_for('static', filename='APrental/licht/script.js') }}" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+    <header>
+        <div class="logo2">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/DJAP_logo1-wit-CROPPED.png') }}" alt="">
+            </a>
+        </div>
+        <div class="logo1">
+            <a href="{{ url_for('aprental') }}">
+                <img src="{{ url_for('static', filename='images/AP-RENTAL-wit.png') }}" alt="">
+            </a>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="{{ url_for('licht') }}">LICHT</a></li>
+                <li><a href="{{ url_for('lichtsets') }}">LICHTSETS</a></li>
+                <li><a href="{{ url_for('speakersets') }}">SPEAKERSETS</a></li>
+                <li class="algemeneVoorwaarden"><a href="{{ url_for('algemenevoorwaarden') }}">algemene voorwaarden</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+
+
+    <div class="containerProducten">
+        <h2>SFX</h2>
+        <h2 class="specialeffects">SPECIAL EFFECTS</h2>
+
+
+        <!-- BEAMZ S1800 Smoke Machine DMX Horizontal/Vertical -->
+        <div class="product">
+            <div class="gallery" data-gallery="1">
+                <img src="{{ url_for('static', filename='images/BEAMZ-CO2-rookmachine-SIDE.jpg') }}" alt="Beamz S1800 verticaal rookmachine (CO2 effect) SIDE" class="gallery-image active">
+                <img src="{{ url_for('static', filename='images/BEAMZ-CO2-rookmachine-ROOK.webp') }}" alt="Beamz S1800 verticaal rookmachine (CO2 effect)" class="gallery-image">
+                <img src="{{ url_for('static', filename='images/BEAMZ-CO2-rookmachine-1.jpg') }}" alt="Beamz S1800 verticaal rookmachine (CO2 effect)" class="gallery-image">
+                <img src="{{ url_for('static', filename='images/BEAMZ-CO2-rookmachine-AFSTANDSBEDIENING.webp') }}" alt="Beamz S1800 verticaal rookmachine (CO2 effect)" class="gallery-image">
+                
+                <button class="gallery-nav prev" onclick="prevImage(1)">&#10094;</button>
+                <button class="gallery-nav next" onclick="nextImage(1)">&#10095;</button>
+            </div>
+
+            <div class="product-info">
+                <a href="https://www.beamzlighting.com/product/s1800-smoke-machine-dmx-horizontal-vertical/" target="_blank" class="hoverLinkFabrikant">
+                    Beamz S1800 verticaal rookmachine (CO2 effect)
+                    <span class="hoverLinkFabrikant-text">Klik hier voor de officiële productpagina.</span>
+                </a>
+                <p class="prijs">Vanaf €35/dag</p>
+                <p class="specificaties">Specificaties:</p>
+                <ul>
+                    <li>Opwarmtijd: 4.5 min</li>
+                    <li>Werkmodi: bedrade afstandsbediening, DMX (1 kanaal), interval</li>
+                    <li>Maximaal opgenomen vermogen: 1800W</li>
+                </ul>
+                <p class="inbegrepen">Inbegrepen:</p>
+                <ul>
+                    <li>Bedrade afstandsbediening</li>
+                    <li>2l vloeistof met CO2 effect, verdwijnt heel snel</li>
+                    <li>Voedingskabel</li>
+                    <li>Safety</li>
+                </ul>
+                <p class="aantalBeschikbaar"><span>Aantal beschikbaar:</span> 1</p>
+            </div>
+        </div>
+
+
+        <!-- BEAMZ S1800 Smoke Machine DMX Horizontal/Vertical -->
+        <div class="product">
+            <div class="gallery" data-gallery="2">
+                <img src="{{ url_for('static', filename='images/STAIRVILLE-hazer.jpg') }}" alt="Stairville AFH-600 DMX Hazer" class="gallery-image active">
+            </div>
+
+            <div class="product-info">
+                <a href="https://www.thomann.de/nl/stairville_afh_600_dmx_hazer.htm" target="_blank" class="hoverLinkFabrikant">
+                    Stairville AFH-600 DMX Hazer
+                    <span class="hoverLinkFabrikant-text">Klik hier voor de officiële productpagina.</span>
+                </a>
+                <p class="prijs">Vanaf €25/dag</p>
+                <p class="specificaties">Specificaties:</p>
+                <ul>
+                    <li>Opwarmtijd: 2 min</li>
+                    <li>Werkmodi: DMX (1 kanaal), auto</li>
+                    <li>Maximaal opgenomen vermogen: 600W</li>
+                </ul>
+                <p class="inbegrepen">Inbegrepen:</p>
+                <ul>
+                    <li>1l vloeistof met CO2 effect, verdwijnt heel snel</li>
+                    <li>Voedingskabel</li>
+                </ul>
+                <p class="aantalBeschikbaar"><span>Aantal beschikbaar:</span> 1</p>
+            </div>
+        </div>
+
+
+        
+    </div>
+</body>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="#" class="footer-button" id="contact-button">
+                <span>CONTACT</span>
+            </a>
+            <a href="../algemene-voorwaarden/index.html" class="footer-button" id="voorwaarden-button">
+                <span>ALGEMENE VOORWAARDEN</span>
+            </a>
+            <a href="#" class="footer-button" id="over-ons-button">
+                <span>OVER ONS</span>
+            </a>
+        </div>
+    </footer>
+</html>
