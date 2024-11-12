@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Rentall - Lichtsets</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='APrental/lichtsets/styles.css') }}">
+	<link rel="icon" type="image/x-icon" href="images/DJAP_logo1-wit-op-zwart.ico">
+	<script src="{{ url_for('static', filename='APrental/lichtsets/script.js') }}" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+    <header>
+        <div class="logo2">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/DJAP_logo1-wit-CROPPED.png') }}" alt="">
+            </a>
+        </div>
+        <div class="logo1">
+            <a href="{{ url_for('aprental') }}">
+                <img src="{{ url_for('static', filename='images/AP-RENTAL-wit.png') }}" alt="">
+            </a>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="{{ url_for('licht') }}">LICHT</a></li>
+                <li><a href="{{ url_for('speakersets') }}">SPEAKERSETS</a></li>
+                <li><a href="{{ url_for('SFX') }}">SFX</a></li>
+                <li class="algemeneVoorwaarden"><a href="{{ url_for('algemenevoorwaarden') }}">algemene voorwaarden</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+
+
+    <div class="containerProducten">
+        <h2>LICHTSETS</h2>
+
+        <!-- LICHTSET 1 -->
+        <div class="product">
+            <div class="gallery" data-gallery="1">
+                <img src="{{ url_for('static', filename='images/DJ-AP_lichtset-1.png') }}" alt="LICHTSET 1" class="gallery-image active">
+                <img src="{{ url_for('static', filename='images/DJ-AP_lichtset-1.png') }}" alt="LICHTSET 1" class="gallery-image">
+                
+                <button class="gallery-nav prev" onclick="prevImage(1)">&#10094;</button>
+                <button class="gallery-nav next" onclick="nextImage(1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <p class="naamProduct">Lichtset 1</p>                
+                <p class="prijs">Vanaf €100/dag</p>
+                <p class="setBevat">Set bevat:</p>
+                <ul>
+                    <li><a href="https://www.thomann.de/be/fun_generation_picospot_45_led.htm" target="_blank">2x Fun Generation PicoSpot 45 Movinghead</a></li>
+                    <li><a href="https://www.bax-shop.be/nl/led-stroboscoop/ayra-flash-30-led-stroboscoop" target="_blank">2x Ayra Flash 30 Stroboscoop</a></li>
+                    <li><a href="https://www.laserworld.com/en/laserworld-el/laserworld-el-400rgb" target="_blank">1x LaserWorld 400mW RGB Laser</a></li>
+                    <li><a href="https://www.bax-shop.nl/lichteffecten/ayra-tdc-hybrid-beam-led-wash-en-lichteffect" target="_blank">1x Ayra TDC Hybrid Beam LED Wash + Moonflower</a></li>
+                    <ul class="setBevatExtraMarge">
+                        <li>1x 1.5m Innox horizontale truss</li>
+                        <li>2x Innox lichtstatief</li>
+                        <li>Bekabeling</li>
+                    </ul>
+                </ul>
+                <p class="specificaties">Specificaties:</p>
+                <ul>
+                    <li>Set best geschikt in combinatie met <a href="../sfx/index.html">rookmachine/hazer</a>.</li>
+                    <li>Maximale opstellingshoogte: 3 meter</li>
+                    <li>Geluidsgestuurd, automatische modus of via DMX</li>
+                </ul>
+                <p class="combineerbaar">Niet Combineerbaar met andere lichtsets</p>
+            </div>
+        </div>
+
+        <!-- LICHTSET 2 -->
+        <div class="product">
+            <div class="gallery" data-gallery="1">
+                <img src="{{ url_for('static', filename='images/DJ-AP_lichtset-2.png') }}" alt="LICHTSET 2" class="gallery-image active">
+                <img src="{{ url_for('static', filename='images/DJ-AP_lichtset-2.png') }}" alt="LICHTSET 2" class="gallery-image">
+                
+                <button class="gallery-nav prev" onclick="prevImage(1)">&#10094;</button>
+                <button class="gallery-nav next" onclick="nextImage(1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <p class="naamProduct">Lichtset 2</p>                
+                <p class="prijs">Vanaf €60/dag</p>
+                <p class="setBevat">Set bevat:</p>
+                <ul>
+                    <li><a href="https://www.bax-shop.be/nl/led-stroboscoop/ayra-flash-30-led-stroboscoop" target="_blank">2x Ayra Flash 30 Stroboscoop</a></li>
+                    <li><a href="https://www.showtec-lights.com/en/42196-led-light-bar-8.html" target="_blank">1x Showtec LED Light Bar 8</a></li>
+                    <li><a href="https://www.bax-shop.nl/lichteffecten/ayra-tdc-hybrid-beam-led-wash-en-lichteffect" target="_blank">1x Ayra TDC Hybrid Beam LED Wash + Moonflower</a></li>
+                    <ul class="setBevatExtraMarge">
+                        <li>1x 1.5m Innox horizontale truss</li>
+                        <li>2x Innox lichtstatief</li>
+                        <li>Bekabeling</li>
+                    </ul>
+                </ul>
+                <p class="specificaties">Specificaties:</p>
+                <ul>
+                    <li>Maximale opstellingshoogte: 3 meter</li>
+                    <li>Geluidsgestuurd, automatische modus of via DMX</li>
+                </ul>
+                <p class="combineerbaar">Niet Combineerbaar met andere lichtsets</p>
+            </div>
+        </div>
+
+        <!-- LICHTSET 3 -->
+        <div class="product">
+            <div class="gallery" data-gallery="1">
+                <img src="{{ url_for('static', filename='images/DJ-AP_lichtset-3.png') }}" alt="LICHTSET 3" class="gallery-image active">
+                <img src="{{ url_for('static', filename='images/DJ-AP_lichtset-3.png') }}" alt="LICHTSET 3" class="gallery-image">
+                
+                <button class="gallery-nav prev" onclick="prevImage(1)">&#10094;</button>
+                <button class="gallery-nav next" onclick="nextImage(1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <p class="naamProduct">Lichtset 1</p>
+                <p class="prijs">Vanaf €180/dag</p>
+                <p class="setBevat">Set bevat:</p>
+                <ul>
+                    <li><a href="https://www.thomann.de/be/fun_generation_picospot_45_led.htm" target="_blank">2x Fun Generation PicoSpot 45 Movinghead</a></li>
+                    <li><a href="https://www.laserworld.com/en/laserworld-el/laserworld-el-400rgb" target="_blank">1x LaserWorld 400mW RGB Laser</a></li>
+                    <li><a href="https://www.bax-shop.be/nl/led-scanners/ayra-tdc-444-mkii-4-in-1-led-scanner" target="_blank">1x Ayra 444 LED Scanner</a></li>
+                    <li><a href="https://www.showtec-lights.com/en/42196-led-light-bar-8.html" target="_blank">1x Showtec LED Light Bar 8</a></li>
+                    <li><a href="https://www.bax-shop.be/nl/led-stroboscoop/ayra-flash-30-led-stroboscoop" target="_blank">2x Ayra Flash 30 Stroboscoop</a></li>
+                    <li><a href="https://www.bax-shop.nl/lichteffecten/ayra-tdc-hybrid-beam-led-wash-en-lichteffect" target="_blank">1x Ayra TDC Hybrid Beam LED Wash + Moonflower</a></li>
+                    <li><a href="https://www.bax-shop.be/nl/led-lichteffect/ayra-tdc-burst-6-led-lichteffect" target="_blank">1x Ayra TDC Burst 6 LED Moonflower</a></li>
+                    <li><a href="https://www.bax-shop.be/nl/led-lichteffect/ayra-tdc-sunrise-led-lichteffect" target="_blank">1x Ayra TDC Sunrise</a></li>
+
+                    <ul class="setBevatExtraMarge">
+                        <li>2x 1.5m Innox horizontale driehoek-truss</li>
+                        <li>1x 1.2m Innox horizontale truss</li>
+                        <li>2x Innox lichtstatief</li>
+                        <li>Bekabeling</li>
+                    </ul>
+                </ul>
+                <p class="specificaties">Specificaties:</p>
+                <ul>
+                    <li>Set best geschikt in combinatie met <a href="../sfx/index.html">rookmachine/hazer</a>.</li>
+                    <li>Maximale opstellingshoogte: 3 meter</li>
+                    <li>Geluidsgestuurd, automatische modus of via DMX</li>
+                </ul>
+                <p class="combineerbaar">Niet Combineerbaar met andere lichtsets</p>
+            </div>
+        </div>
+
+
+        
+    </div>
+</body>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="#" class="footer-button" id="contact-button">
+                <span>CONTACT</span>
+            </a>
+            <a href="../algemene-voorwaarden/index.html" class="footer-button" id="voorwaarden-button">
+                <span>ALGEMENE VOORWAARDEN</span>
+            </a>
+            <a href="#" class="footer-button" id="over-ons-button">
+                <span>OVER ONS</span>
+            </a>
+        </div>
+    </footer>
+</html>
