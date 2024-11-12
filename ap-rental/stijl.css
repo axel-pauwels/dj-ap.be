@@ -119,6 +119,15 @@ main.content {
 }
 
 
+.image-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
 /* Stijl voor de footer */
 footer {
     width: 100%;
@@ -220,5 +229,24 @@ footer {
     .logo1 a {
         width: 76px;
         height: auto;
+    }
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    .image-link:nth-of-type(1) img {
+        content: url("../images/LICHT 2-1.png");
+    }
+    .image-link:nth-of-type(2) img {
+        content: url("../images/LICHTSETS 2-1.png");
+    }
+    .image-link:nth-of-type(3) img {
+        content: url("../images/SPEAKERSETS 2-1.png");
+    }
+    .image-link:nth-of-type(4) img {
+        content: url("../images/SFX 2-1.png");
     }
 }
