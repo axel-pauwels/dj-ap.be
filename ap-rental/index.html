@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Rental</title>
+    <link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="stijl.css">
+    <link rel="icon" type="image/x-icon" href="../images/DJAP_logo1-wit-op-zwart.ico">
+	<script src="{{ url_for('static', filename='APrental/script.js') }}" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo2">
+            <a href="../index.html">
+                <img src="../images/DJAP_logo1-wit-CROPPED.png"alt="DJ AP LOGO">
+            </a>
+        </div>
+        <div class="logo1">
+            <a href="{{ url_for('aprental') }}">
+                <img src="../images/AP-RENTAL-wit.png" alt="AP RENTAL">
+            </a>
+        </div>
+    </header>
+
+
+    <main class="content">
+        <div class="image-links">
+            <a href="licht/index.html" class="image-link"><img src="../images/LICHT V2.png" alt="LICHT"></a>
+            <a href="licht/index.html" class="image-link"><img src="../images/LICHTSETS.png" alt="LICHTSETS"></a>
+            <a href="speakersets/index.html" class="image-link"><img src="../images/SPEAKERS.png" alt="SPEAKERSETS"></a>
+            <a href="sfx/index.html" class="image-link"><img src="../images/SFX.png" alt="SFX"></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="../contact/index.html" class="footer-button" id="contact-button">
+                <span>CONTACT</span>
+            </a>
+            <a href="algemene-voorwaarden/index.html" class="footer-button" id="voorwaarden-button">
+                <span>ALGEMENE VOORWAARDEN</span>
+            </a>
+            <a href="#" class="footer-button" id="over-ons-button">
+                <span>OVER ONS</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
