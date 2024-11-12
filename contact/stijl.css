@@ -345,3 +345,63 @@ p {
         height: 31px; /* Pas de hoogte aan voor een kleiner logo */
     }
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Zorg ervoor dat de container en knoppen beter zichtbaar zijn */
+    .containerContact, .gegevens {
+        width: 90%; /* Breder op kleinere schermen */
+        padding: 15px;
+        box-shadow: none; /* Minder schaduw voor een simplistischere weergave */
+    }
+
+    /* Pas knopgroottes en uitlijning aan */
+    .contact-links {
+        flex-direction: column; /* Stapel de knoppen verticaal */
+        gap: 20px; /* Verklein de afstand tussen de knoppen */
+    }
+
+    .contact-btn {
+        padding: 10px 15px; /* Verklein de padding van knoppen */
+        font-size: 16px; /* Verklein het lettertype iets voor betere leesbaarheid */
+        width: 100%; /* Zorg ervoor dat de knoppen de volledige breedte vullen */
+        text-align: center;
+    }
+
+    /* Verklein de tekstgroottes */
+    h1 {
+        font-size: 1.5em; /* Verminder de grootte voor een compacter uiterlijk */
+    }
+
+    p, .mailAdres, .instagram {
+        font-size: 14px; /* Kleinere tekstgrootte voor betere leesbaarheid */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra aanpassingen voor zeer kleine schermen */
+    .containerContact, .gegevens {
+        width: 100%; /* Gebruik de volledige breedte op zeer kleine schermen */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3em; /* Verminder de grootte verder voor kleine schermen */
+    }
+
+    .contact-links {
+        gap: 10px; /* Minimaliseer ruimte tussen de knoppen verder */
+    }
+
+    .contact-btn {
+        padding: 8px 12px; /* Pas de padding aan voor compacte knoppen */
+        font-size: 14px; /* Verklein de tekstgrootte verder */
+    }
+}
