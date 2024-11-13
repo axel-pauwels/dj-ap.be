@@ -49,4 +49,4 @@ function nextImage() {
 }
 
 // Wissel de afbeelding om de 5 seconden
-setInterval(nextImage, 1000);
+setInterval(nextImage, 5000);
