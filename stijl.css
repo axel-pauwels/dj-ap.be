@@ -179,48 +179,27 @@ header {
     cursor: pointer;
 }
 
-/* Sluitknop in de hoek van de modal */
-#close-btn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 2rem;
-    color: #FFF;
-    cursor: pointer;
-}
-
-/* Gestylde afbeelding binnen de modal */
-#modal img {
-    max-width: 90vw;             /* Maximale breedte zodat afbeelding niet uit het scherm loopt */
-    max-height: 90vh;            /* Maximale hoogte */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-    animation: zoomIn 0.4s ease; /* Animatie voor vergrotingseffect */
-}
-
-/* Zoom-in animatie */
-@keyframes zoomIn {
-    from {
-        transform: scale(0.6);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 
-
-
-.extra-fotos {
+/* Slideshow CSS */
+.slideshow {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
-    padding-bottom: 3rem;
+    align-items: center;
+    width: 100%;
+    height: 80vh; /* Neem 80% van de viewport hoogte */
+    overflow: hidden;
+    margin-top: 120px; /* ruimte onder de header */
 }
 
+.slideshow img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
 
 
 
