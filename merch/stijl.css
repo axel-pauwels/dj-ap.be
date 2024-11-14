@@ -15,22 +15,26 @@ body, html {
     flex-direction: column;
 }
 
-
 header {
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    height: 5rem;
     padding: 1rem 20px 1rem 30px;
-    background-color: #292929;
+    background-color: black;
     color: #fff;
     top: 0;
     width: 100%;
     z-index: 15;
 }
 
-
+.logo a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-size: 1.75em;
+}
 
 .nav-links {
     display: none;
@@ -42,15 +46,22 @@ header {
     gap: 1vw;
     padding: 0;
     margin: 0;
+    align-items: center;  /* Zorg ervoor dat de items verticaal gecentreerd zijn */
+    height: 100%;         /* Zorg ervoor dat de hoogte van de lijst de volledige header vult */
 }
 
 .nav-links a {
     color: #fff;
-    font-family: Ubuntu;
-    font-style: bold;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
     text-decoration: none;
-    font-size: 1.15rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;  /* Centreer de tekst in de links */
+    height: 100%;         /* Zorg ervoor dat de link de volledige hoogte van de header vult */
+    padding: 0 10px;      /* Voeg wat horizontale padding toe voor ruimte rondom de tekst */
 }
+
 
 .hamburger {
     display: flex;
@@ -66,41 +77,44 @@ header {
     background-color: #fff;
 }
 
-
-body {
-    margin-top: 6.5rem;
-}
-
-
-
-.logo1 a {
-    display: block;
-    height: auto;
+/* Stijl voor de link rondom het logo */
+.logo a {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 270px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
 }
   
-.logo1 a img {
-    max-width: 100%;
-    height: 57.41px;
-    width: auto;
-    display: block;
+  /* Stijl voor de afbeelding zelf */
+.logo a img {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
 }
 
-.logo2 {
-    align-content: center;
-    justify-content: center;
+
+/* Stijl voor de link rondom het logo */
+.APRENTALLogo {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 100px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
+}
+  
+  /* Stijl voor de afbeelding zelf */
+.APRENTALLogo {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
 }
 
-.logo2 a {
-    display: block;
-    height: 57.41px;
-    width: auto;
-}
 
-.logo2 a img {
-    max-height: 100%;
-    height: 57.41px;
-    width: auto;
-    display: block;
+
+
+
+
+.algemeneVoorwaarden a{
+    font-style: italic;
 }
 
 
@@ -129,8 +143,7 @@ body {
 }
 
 
-/* Stijlen voor Sold Out label */
-.soldOut {
+.info {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -142,7 +155,6 @@ body {
     font-weight: bold;
 }
 
-/* Zorg dat .containerProduct een relatieve positie heeft zodat Sold Out label zich daaraan aanpast */
 .containerProduct {
     position: relative;
     background: #fff;
@@ -269,7 +281,7 @@ footer {
     font-style: italic;
 }
 
-.footer-links .actief {
+.footer-links .actief, .nav-links .actief {
     text-decoration: underline;
     text-underline-offset: 4px; /* Pas dit aan voor meer of minder ruimte */
 }
@@ -337,6 +349,7 @@ footer {
     }
 }
 
+/*
 @media (min-width: 768px) {
     .nav-links {
         display: flex;
@@ -348,6 +361,7 @@ footer {
         display: none;
     }
 }
+
 
 @media (max-width: 767px) {
     .hamburger {
@@ -384,7 +398,7 @@ footer {
         gap: 1px;
     }
 }
-
+*/
 
 @media only screen and  (max-width: 768px) {
     .container {
@@ -499,30 +513,66 @@ footer {
 
 
 
-
-
-
-@media only screen and (max-width: 450px) {
-    .logo2, logo1 {
-        height: 31.42px;
+@media (min-width: 868px) {
+    /* Toon de navigatielinks */
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
     }
+
+    /* Verberg het hamburger menu */
+    .hamburger {
+        display: none;
+    }
+
+    /* Zorg dat de logo links staat en navigatielinks rechts */
     header {
-        height: 4rem;
-        align-items: center
+        justify-content: space-between;
     }
 }
 
-@media only screen and (max-width: 750px) {
-    .logo2 a img {
-        height: 7vw; /* Pas de hoogte aan voor een kleiner logo */
+/* Media query voor kleinere schermen */
+@media (max-width: 867px) {
+    /* Logo centreren */
+    .logo {
+        margin: 0 auto;
     }
 
-    .logo1 a img {
-        width: auto;               /* Verklein de breedte voor kleinere schermen */
-        height: 7vw;
+    /* Uitlijnen hamburger icon naar rechts */
+    .hamburger {
+        position: absolute;
+        right: 20px;
     }
 
-    .logo2, .logo1 {
-        display: flex;
+    /* Open het menu als het actief is */
+    .nav-links.active {
+        display: block;
+        position: fixed;
+        top: 70px;                     /* Plaatsing onder de header */
+        right: 0;
+        width: 300px;
+        background-color: #333;
+        padding: 0 0;
+        text-align: right;
+        border-radius: 4px 0 0 6px;
+        box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
+    }
+
+    
+    .nav-links li {
+        z-index: 50;
+        padding: 10px 20px;
+        border-bottom: 1px solid #444; /* Voeg onderlijnen toe */
+    }
+    
+    .nav-links li:last-of-type {
+        border-bottom: none;
+    }
+
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1px;
     }
 }
