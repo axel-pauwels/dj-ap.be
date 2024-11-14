@@ -189,6 +189,22 @@ header {
     content: url('../images/DJ-AP_tshirt-white-FRONT.png');
 }
 
+.containerProduct .cap:hover {
+    content: url('../images/DJ-AP_cap-BACK.png');
+}
+
+.containerProduct .cordCap:hover {
+    content: url('../images/DJ-AP_cord-cap-BACK.png');
+}
+
+
+.containerProduct .vlag:hover {
+    content: url('../images/DJ-AP_vlag-black-BACK.png');
+}
+
+
+
+
 .productInfo {
     padding: 0 1vw 1vw 1vw;
     font-weight: 600;
