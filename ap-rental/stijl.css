@@ -6,13 +6,15 @@ body {
     background-color: #FFF;
 }
 
+
 body, html {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 90vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
     display: flex;
     flex-direction: column;
 }
+
 
 header {
     display: flex;
@@ -27,51 +29,36 @@ header {
     z-index: 15;
 }
 
-.nav-links {
-    display: none;
-}
-
-.nav-links ul {
-    display: flex;
-    list-style-type: none;
-    gap: 1vw;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links a {
+.logo a {
     color: #fff;
-    font-family: Ubuntu;
-    font-style: bold;
+    font-weight: bold;
     text-decoration: none;
-    font-size: 1.15rem;
+    font-family: Ubuntu;
+    font-size: 1.75em;
 }
 
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
 
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-}
 
 body {
     margin-top: 6.5rem;
 }
 
-.logo1 a {
-    margin-left: 2.25rem;
-    display: block;
-    width: 120px;
-    height: auto;
+
+
+.logo1 {
+    margin: 0 auto;               /* Zorgt ervoor dat logo1 in het midden staat */
+    display: flex;
+    justify-content: center;       /* Zorgt dat de inhoud van logo1 in het midden wordt uitgelijnd */
+    align-items: center;
 }
-  
+
+.logo1 a {
+    display: block;
+    width: 120px;                  /* Standaard breedte voor grotere schermen */
+    height: auto;
+    text-align: center;
+}
+
 .logo1 a img {
     max-width: 100%;
     height: auto;
@@ -80,472 +67,112 @@ body {
 
 .logo2 a {
     display: block;
-    height: 57.41px;
     width: auto;
+    height: 57.41px;
+    text-align: center;
 }
-
+  
 .logo2 a img {
     max-height: 100%;
-    width: auto;
+    height: auto;
     display: block;
 }
 
-.algemeneVoorwaarden a {
-    font-style: italic;
+
+.logo2 {
+    margin: 0 auto;
 }
 
-.containerProducten {
-    width: 70vw;
-    margin: 2rem auto;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
 
-.containerProducten h2 {
-    color: #333;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 700;
-    padding-top: 1.25rem;
-    padding-bottom: .75rem;
-    font-family: Ubuntu;
-}
 
-.product {
+main.content {
     display: flex;
-    gap: 2rem;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    margin: 1rem;
-}
-
-.product:last-of-type {
-    border-bottom: none;
-}
-
-.product-info .prijs {
-    margin: .2rem 0 0 0;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.setBevat {
-    margin: 4rem 0 0 0;
-    font-weight: bold;
-}
-
-.product-info {
-    flex-grow: 1;
-    font-family: sans-serif;
-    max-width: 50%;
-}
-
-.setBevatExtraMarge {
+    flex-direction: column;
+    align-items: center;
     margin-top: 1rem;
 }
 
-.product-info a, .naamProduct {
-    color: #444;
-    font-size: 1.6em;
-    margin: 0 0 30px;
-    font-weight: 600;
-}
-
-.product-info a:hover {
-    text-decoration: underline; /* Onderstreping bij hover */
-}
-
-.product-info a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    color: black;
-}
-
-.product-info a.hoverLinkFabrikant {
-    position: relative;
-    cursor: pointer;
-}
-
-.product-info a.hoverLinkFabrikant .hoverLinkFabrikant-text {
-    visibility: hidden;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 50;
-    top: 125%;
-    left: 70%;
-    transform: translateX(-70%);
-    white-space: nowrap;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-    font-size: 15px;
-}
-
-.product-info a.hoverLinkFabrikant .hoverLinkFabrikant-text::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
-}
-
-.product-info a.hoverLinkFabrikant:hover .hoverLinkFabrikant-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.product-info p {
-    line-height: 1.6;
-    margin: 10px 0 0 0;
-}
-
-.product:hover {
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.specificaties {
-    font-weight: 600;
-    margin-top: 5rem;
-}
-
-.prijs, .binnekortBeschikbaar, .setBevat, .specificaties, .combineerbaar {
-    font-family: Ubuntu;
-}
-
-.combineerbaar {
-    font-weight: 500;
-    font-style: italic;
-}
-
-.binnekortBeschikbaar {
-    font-style: italic;
-    margin: .8rem 0 0 0;
-    font-weight: bold;
-    font-size: 18px;
-    color: #666;
-}
-
-.bekabeling {
-    padding-top: .6rem;
-}
-
-.containerProducten ul ul{
-    margin-left: 1rem;
-}
-
-/* Galerij container */
-.gallery {
-    position: relative;
-    width: 100%;
-    max-width: 600px;  /* Max breedte op desktops */
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 5px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Galerij afbeeldingen */
-.gallery-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    width: auto;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.gallery-image.active {
-    opacity: 1;
-    position: relative;
-}
-
-/* Navigatieknoppen */
-.gallery-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    z-index: 10;
-}
-
-.gallery-nav.prev {
-    left: 10px;
-}
-
-.gallery-nav.next {
-    right: 10px;
-}
-
-.gallery-nav:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.containerProducten li {
-    width: 50vw;
-    list-style-type: disc;
-    margin-left: 1rem;
-    margin-top: .5rem;
-    font-family: ubuntu;
-}
-
-
-
-
-
-/* Stijling voor de "Naar boven" knop */
-.to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;  /* Start als verborgen */
-    font-size: 14px;
-    z-index: 1000;  /* Zodat het boven de andere elementen verschijnt */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Maak de knop zichtbaar wanneer de gebruiker heeft gescrolld */
-.to-top.visible {
-    display: block;
-}
-
-/* Verander de kleur bij hover */
-.to-top:hover {
-    background-color: #555;
-}
-
-
-
-
-footer {
-    margin-top: 5rem;
-    background-color: #292929;
-    color: white;
-    padding: 20px 10%;
-    font-family: Ubuntu, sans-serif;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr; /* Drie kolommen: links, midden en rechts */
-    gap: 10px;
-    width: 100%;
-    height: fit-content;
-}
-
-.footer-links {
-    font-weight: 500;
-    grid-column: 1/3;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    height: fit-content;
-    width: 100%;
-}
-
-
-.social-links {
-    font-weight: 500;
-    grid-column: 3/5;
-    grid-row: 1/2;
+/* Stijl voor de foto-links */
+.image-links {
+    width: 70vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    height: fit-content;
+    gap: 1rem;
+}
+
+.image-link img {
+    width: 100%;              /* Zorg dat de afbeelding de volledige breedte vult */
+    height: calc(70vw / 5);    /* Bereken de hoogte om de 5:1 verhouding te behouden */
+    object-fit: cover;         /* Zorg dat de afbeelding goed geschaald wordt zonder te vervormen */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-link img:hover {
+    transform: scale(1.05);    /* Lichte zoom-in bij hover */
 }
 
 
-.actief {
-    text-decoration: underline;
+.image-links a:last-of-type {
+    margin-bottom: 2rem;
 }
 
 
-.footer-links a:nth-child(3) {
-    grid-column: 1/3;
-}
-
-.algemene-voorwaarden {
-    font-style: italic;
-}
-
-.footer-links .actief {
-    text-decoration: underline;
-    text-underline-offset: 4px; /* Pas dit aan voor meer of minder ruimte */
-}
-
-.footer-links a, .social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-links a:hover, .social-links a:hover {
-    color: #ff8c00;
-}
-
-.footer-center {
-    font-size: 1rem;
-    color: #bbb;
-    text-align: center;
-    grid-column: 2/4;
-    align-self: end;
+.image-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 
 
 
 
-/* Responsieve aanpassingen */
-@media (max-width: 600px) {
-    .gallery {
-        width: 100%;
-        max-width: 300px;
+/* Media query voor grotere schermen */
+@media (min-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+}
+
+/* Media query voor kleinere schermen */
+@media (max-width: 767px) {
+
+    
+    .image-links {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }    
+
+
+}
+
+@media only screen and (max-width: 750px) {
+    .containerInfo {
+        width: 90%;
+    }
+    
+    .logo2 a {
+        height: 7vw; /* Pas de hoogte aan voor een kleiner logo */
+    }
+
+    .logo1 a {
+        width: 17vw;               /* Verklein de breedte voor kleinere schermen */
         height: auto;
     }
-}
 
-/* Media Queries */
-
-@media (max-width: 1300px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-    .gallery {
-        max-width: 35%;
-        margin: 0 3rem;
-    }
-    header h1 {
-        font-size: 2rem;
-    }
-    .containerProducten {
-        max-width: 80%;
-        padding: 5%;
-    }
-    .product {
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-        padding: 5px;
-    }
-    .gallery {
-        max-width: 70%;
-        margin: 0 1rem;
-        max-width: 480px;
-        height: calc(480px * 0.75);
-    }
-    .logo1 img {
-        height: 40px;
-    }
-
-    .product-info {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 450px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    .containerProducten {
-        max-width: 100%;
-        padding: 5%;
-    }
-    .gallery {
-        max-width: 100%;
-    }
-}
-
-
-@media (min-width: 1100px) {
-    .nav-links {
+    .logo2, .logo1 {
         display: flex;
-        justify-content: flex-end;
-        flex-grow: 1;
     }
-    .hamburger {
-        display: none;
-    }
-    header {
-        justify-content: center;
+    .containerInfo {
+        width: 95%;
     }
 }
 
-@media (max-width: 1099px) {
-    .logo1, .logo2 {
-        margin: 0 auto;
-    }
-    .logo1 a {
-        width: 10.4vw;
-    }
-    .logo2 a {
-        height: 5vw;
-    }
-    .logo1 a, .logo1 a img, .logo2 a, .logo2 a img {
-        padding: 0;
-        margin: 0;
-    }
-
-    .hamburger {
-        position: absolute;
-        right: 2vw;
-    }
-
-    .nav-links.active {
-        display: block;
-        position: fixed;
-        top: 70px;
-        right: 0;
-        width: 300px;
-        background-color: #333;
-        padding: 0 0;
-        text-align: right;
-        border-radius: 4px 0 0 6px;
-        box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
-    }
-    .nav-links li {
-        z-index: 50;
-        padding: 10px 20px;
-        border-bottom: 1px solid #444;
-    }
-    .nav-links li:last-of-type {
-        border-bottom: none;
-    }
-    .nav-links ul {
-        flex-direction: column;
-        gap: 1px;
-    }
-}
 
 
 @media only screen and (max-width: 450px) {
@@ -564,6 +191,26 @@ footer {
 
 
 
+
+
+@media (max-width: 1200px) {
+    .image-link:nth-of-type(1) img {
+        content: url("../images/LICHT 2-1.png");
+    }
+    .image-link:nth-of-type(2) img {
+        content: url("../images/LICHTSETS 2-1.png");
+    }
+    .image-link:nth-of-type(3) img {
+        content: url("../images/SPEAKERSETS 2-1.png");
+    }
+    .image-link:nth-of-type(4) img {
+        content: url("../images/SFX 2-1.png");
+    }
+}
+
+
+
+
 @media only screen and (max-width: 1142px) {
     footer {
         padding: 20px 10% 20px 5%;
@@ -573,12 +220,12 @@ footer {
 @media only screen and (max-width: 850px) {
     footer {
         padding: 20px 7% 20px 7%;
-        height: fit-content;
+        height: 19rem;
         gap: 0px;
     }
     
     .footer-links {
-        height: fit-content;
+        height: 100%;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
         width: 100%;
