@@ -393,6 +393,14 @@ footer {
         font-size: 6vw;
     }
     
+
+
+
+
+    .containerProducten h2 {
+        font-size: 1.8rem;
+    }
+
 }
 
 @media (min-width: 1100px) {
@@ -462,6 +470,22 @@ footer {
         margin-left: 0;
         margin-right: 0;
     }
+
+    
+
+    .containerProducten a {
+        text-decoration: none;
+        color: black;
+        border: 1px black solid;
+        border-radius: 2rem;
+        text-align: center;
+        width: 80%;
+        padding: 1rem;
+        transition: 0.3s;
+        font-weight: 450;
+    }
+
+
 
     .product-info {
         font-family: sans-serif;
