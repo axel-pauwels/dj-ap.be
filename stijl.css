@@ -314,13 +314,6 @@ footer {
 
 @media only screen and (max-width: 1142px){
     footer {
-        padding: 20px 10% 20px 5%;
-    }
-}
-
-
-@media only screen and (max-width: 1142px){
-    footer {
         padding: 20px 7% 20px 7%;
         height: fit-content;
         gap: 0px;
@@ -340,7 +333,7 @@ footer {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 868px) {
     /* Toon de navigatielinks */
     .nav-links {
         display: flex;
@@ -360,7 +353,7 @@ footer {
 }
 
 /* Media query voor kleinere schermen */
-@media (max-width: 767px) {
+@media (max-width: 867px) {
     /* Logo centreren */
     .logo {
         margin: 0 auto;

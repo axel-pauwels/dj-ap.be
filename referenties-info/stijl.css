@@ -19,13 +19,12 @@ body, html {
 header {
     display: flex;
     position: fixed;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem 20px 1rem 30px;
     background-color: black;
     color: #fff;
     top: 0;
-    width: 100%;
+    width: 300vw;
     z-index: 15;
 }
 
@@ -75,6 +74,8 @@ body {
 .logo2 {
     display: flex;
     justify-content: center; /* Centreert het logo */
+    text-align: center;
+    
 }
 
 .logo2 a {
@@ -141,11 +142,10 @@ h2 {
 /* Flex container voor alle sections, aangepast naar maximaal 70% breedte */
 .sections-container {
     display: grid;
-    gap: 20px; /* Ruimte tussen de sections */
-    padding: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Maximaal 3 kolommen */
-    max-width: 70%; /* Maximum breedte van 70% */
-    margin: 0 auto; /* Centraal uitlijnen */
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 /* Stijlen voor de section en het ul-element */
@@ -349,10 +349,17 @@ footer {
 
 @media only screen and (max-width: 1142px){
     .containerInfo {
-        width: 70%;
+        width: 80vw;
     }
     footer {
         padding: 20px 10% 20px 5%;
+    }
+    
+    .sections-container {
+        max-width: 90%;
+    }
+    h1 {
+        margin-bottom: 1rem;
     }
 }
 
