@@ -1,0 +1,492 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'CoFo Sans', sans-serif;
+    background-color: #FFF;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 20px 1rem 30px;
+    background-color: black;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+.logo {
+    margin: auto;
+}
+
+.logo a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-size: 1.75em;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1vw;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links a {
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.logo a {
+    display: block;
+    width: 270px;
+    height: auto;
+    text-align: center;
+}
+  
+.logo a img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+
+.algemeneVoorwaarden a{
+    font-style: italic;
+}
+
+
+
+.info {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 5%;
+    padding: .75rem 1rem;
+    border: 2px solid rgb(214,16,32);
+    color: rgb(214,16,32);
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 750;
+    text-align: center;
+}
+
+
+
+
+.containerProducten {
+    width: 60vw;
+    margin: 10rem auto 2rem auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.containerProducten h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 700;
+    padding-top: 1.5rem;
+    padding-bottom: .75rem;
+    font-family: Ubuntu;
+    margin: 0;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: Ubuntu;
+}
+
+
+.containerProducten a {
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+    border-radius: 2rem;
+    text-align: center;
+    width: 50%;
+    padding: 1rem;
+    transition: 0.3s;
+    font-weight: 450;
+}
+
+.infos a:last-child{
+    margin-bottom: 1.75rem;
+}
+
+.containerProducten a:hover {
+    background: rgba(211, 211, 211, 0.719);
+}
+
+
+
+
+
+
+
+
+/* Slideshow CSS */
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    overflow: hidden;
+    margin-top: 20px; /* ruimte onder de header */
+}
+
+.slideshow img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.to-top.visible {
+    display: block;
+}
+
+.to-top:hover {
+    background-color: #555;
+}
+
+
+
+
+
+footer {
+    margin-top: 60px;
+    background-color: #292929;
+    color: white;
+    padding: 20px 10%;
+    font-family: Ubuntu;
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+}
+
+.footer-links {
+    font-weight: 500;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    gap: 8px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+
+.actief {
+    text-decoration: underline;
+}
+
+.algemene-voorwaarden {
+    font-style: italic;
+}
+
+
+.footer-links a:nth-child(4) {
+    padding-top: .5rem;
+}
+
+
+.footer-links .actief, .nav-links .actief {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links a:hover {
+    color: #ff8c00;
+}
+
+.footer-center {
+    font-size: 1rem;
+    color: #bbb;
+    text-align: center;
+    align-self: end;
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .gallery {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .info {
+        margin: 2rem auto 0 5%;
+        padding: .75rem 1rem;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .containerProducten {
+        max-width: 80%;
+        padding: 0;
+    }
+
+    .slideshow {
+        width: 61%;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    .gallery {
+        width: 80%;
+        margin: 0 3rem;
+    }
+    .gallery {
+        max-width: 90%;
+        margin: 0 1rem;
+        max-width: 480px;
+        height: calc(480px * 0.75);
+    }
+
+    .product-info {
+        width: 100%;
+        align-items: left;
+        text-align: left;
+    }
+
+    .beschikbare-maten, details {
+        padding-top: 0.5rem;
+    }
+
+    .naamProduct, .andereProductenTekst {
+        font-size: 25px;
+    }
+
+    .andereProducten {
+        grid-template-columns: repeat(2, 1fr);
+        width: 75%;
+        column-gap: .5rem;
+    }
+
+    .andereProductenTekst {
+        grid-column: 1/3;
+    }
+
+    .andereProducten a:nth-child(4) {
+        grid-column: 1/3;
+        width: 50%;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .containerProducten {
+        width: 100%;
+    }
+
+    .slideshow {
+        width: 81%;
+    }
+
+
+    .gallery {
+        max-width: 100%;
+    }
+
+    .naamProduct, .andereProductenTekst {
+        font-size: 6vw;
+    }
+    
+}
+
+@media (min-width: 1100px) {
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+    .hamburger {
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+    .infos a {
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 1099px) {
+    .hamburger {
+        position: absolute;
+        right: 2vw;
+    }
+
+    .nav-links.active {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 300px;
+        background-color: #333;
+        padding: 0 0;
+        text-align: right;
+        border-radius: 4px 0 0 6px;
+        box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
+    }
+    .nav-links li {
+        z-index: 50;
+        padding: 10px 20px;
+        border-bottom: 1px solid #444;
+    }
+    .nav-links li:last-of-type {
+        border-bottom: none;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1142px) {
+}
+
+@media only screen and (max-width: 850px) {
+
+    .product {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .containerProducten {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .product-info {
+        font-family: sans-serif;
+        max-width: 90%;
+    }
+
+    .slideshow {
+        width: 81%;
+    }
+
+
+    
+
+    .andereProducten {
+        grid-template-columns: repeat(1, 1fr);
+        width: 50%;
+        column-gap: .5rem;
+    }
+
+    .andereProductenTekst {
+        grid-column: 1/2;
+    }
+
+    .andereProducten a:nth-child(4) {
+        grid-column: 1/2;
+        width: auto;
+    }
+}
