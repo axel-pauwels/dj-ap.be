@@ -205,6 +205,35 @@ header {
 
 
 
+
+
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+}
+
+.to-top.visible {
+    display: block;
+}
+
+.to-top:hover {
+    background-color: #555;
+}
+
+
+
+
+
 footer {
     margin-top: 5rem;
     background-color: #292929;
@@ -394,5 +423,9 @@ footer {
     .nav-links ul {
         flex-direction: column;
         gap: 1px;
+    }
+    
+    .footer-links {
+        grid-column: 1/4;
     }
 }
