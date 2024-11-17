@@ -126,9 +126,9 @@ body {
 .product {
     display: flex;
     gap: 2rem;
-    padding: 20px;
+    padding: 40px 20px;
     border-bottom: 1px solid #ddd;
-    margin: 1rem ;
+    margin: 1rem;
 }
 
 .product:last-of-type {
@@ -414,10 +414,9 @@ footer {
     font-size: 1rem;
     color: #bbb;
     text-align: center;
-    grid-column: 2/4;
+    grid-column: 1/5;
     align-self: end;
 }
-
 
 
 
@@ -445,6 +444,8 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: left;
+        padding-left: 0;
+        padding-right: 0;
     }
     .gallery {
         max-width: 70%;
@@ -465,6 +466,7 @@ footer {
     .containerProducten {
         max-width: 100%;
         padding: 5%;
+        padding-top: 0;
     }
     .gallery {
         max-width: 100%;
@@ -552,7 +554,20 @@ footer {
 
 @media only screen and (max-width: 1142px) {
     footer {
-        padding: 20px 10% 20px 5%;
+        padding: 20px 7% 20px 7%;
+        height: fit-content;
+        gap: 0px;
+    }
+    
+    .footer-links {
+        height: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        width: 100%;
+    }
+
+    .footer-links a:nth-child(3) {
+        grid-column: 1/2;
     }
 }
 
@@ -568,6 +583,7 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
         width: 100%;
+        grid-column: 1/4;
     }
 
     .footer-links a:nth-child(3) {
