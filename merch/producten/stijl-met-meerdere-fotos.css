@@ -444,7 +444,7 @@ footer {
     font-size: 1rem;
     color: #bbb;
     text-align: center;
-    grid-column: 2/4;
+    grid-column: 1/5;
     align-self: end;
 }
 
@@ -528,37 +528,6 @@ footer {
         width: 50%;
         justify-self: center;
     }
-}
-
-@media (max-width: 450px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    .containerProducten {
-        width: 100%;
-    }
-    
-    .logo2, .logo1 {
-        display: flex;
-    }
-    .logo2 a {
-        height: 31px;
-    }
-
-    .logo1 a {
-        width: 76px;
-        height: auto;
-    }
-
-
-    .gallery {
-        max-width: 100%;
-    }
-
-    .naamProduct, .andereProductenTekst {
-        font-size: 6vw;
-    }
-    
 }
 
 @media (min-width: 1100px) {
@@ -681,4 +650,50 @@ footer {
         grid-column: 1/2;
         width: auto;
     }
+    
+    .footer-links {
+        height: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        width: 100%;
+        grid-column: 1/4;
+    }
+
+    .footer-links a:nth-child(3) {
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .containerProducten {
+        width: 100%;
+    }
+    
+    .logo2, .logo1 {
+        display: flex;
+    }
+    .logo2 a {
+        height: 31px;
+    }
+
+    .logo1 a {
+        width: 76px;
+        height: auto;
+    }
+
+    .gallery {
+        max-width: 100%;
+    }
+
+    .naamProduct, .andereProductenTekst {
+        font-size: 6vw;
+    }
+
+    .andereProducten {
+        width: 80%;
+    }
+    
 }

@@ -130,7 +130,7 @@ header {
     border-radius: 8px;
     font-family: Ubuntu;
     align-items: center;
-    
+    margin-top: 7rem
 }
 
 
@@ -348,20 +348,6 @@ footer {
     }
     p {
         font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.6em;
-    }
-
-    p {
-        font-size: 0.9em;
     }
 }
 
@@ -605,5 +591,33 @@ footer {
     
     .footer-links {
         grid-column: 1/4;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+    .containerProducten {
+        width: 100%;
+    }
+    .gallery {
+        max-width: 100%;
+    }
+    .container {
+        padding: 10px;
+        margin: 7rem 0 0 0;
+    }
+    .containerProduct img {
+        padding-bottom: 10px;
+    }
+    .productInfo p{
+        font-size: 5vw;
     }
 }
