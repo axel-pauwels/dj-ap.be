@@ -94,8 +94,6 @@ body {
     margin: 20px auto;
     padding: 20px;
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
 }
 
 
@@ -127,7 +125,6 @@ h2 {
     margin-bottom: 5rem;
 }
 
-/* Stijl voor elke paragraaf binnen containerInfo */
 .containerInfo p {
     color: #555;
     margin: 8px 0;
@@ -139,16 +136,11 @@ h2 {
 
 
 
-/* Flex container voor alle sections, aangepast naar maximaal 70% breedte */
 .sections-container {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     max-width: 70%;
     margin: 0 auto;
 }
 
-/* Stijlen voor de section en het ul-element */
 .section {
     padding: 15px;
     border-radius: 8px;
@@ -156,25 +148,22 @@ h2 {
     font-family: Ubuntu;
     background-color: #fff;
 }
-/* Stijlen voor de section titels */
-.section h2 {
-    text-align: center;
-    color: #444;
-    font-weight: 700;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
 
-/* Stijlen voor de ul-lijst binnen de section */
+
+
 .section ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 8px;
+    
 }
 
-/* Stijlen voor li en a */
 .section li {
-    margin-bottom: 8px; /* Ruimte tussen items */
+    margin-bottom: 8px;
     padding: 6px;
 }
 
