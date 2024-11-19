@@ -265,6 +265,7 @@ body {
     justify-content: center;
 }
 
+
 /* Stijl voor de galerijafbeeldingen */
 .gallery-image {
     position: absolute; /* Zorg ervoor dat alle afbeeldingen op elkaar worden gestapeld */

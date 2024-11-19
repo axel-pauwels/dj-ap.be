@@ -13,52 +13,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.gallery img'); // Selecteer alle afbeeldingen
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeLightbox = document.getElementById('close-lightbox');
 
-// Houd de huidige afbeeldingindex per galerij bij
-const galleryIndices = {};
-
-// Functie om de afbeelding te tonen op basis van de index voor een specifieke galerij
-function showImage(galleryId, index) {
-    const gallery = document.querySelector(`.gallery[data-gallery="${galleryId}"]`);
-    if (!gallery) return; // Check of de galerij bestaat
-    const images = gallery.querySelectorAll('.gallery-image');
-
-    // Stel de index in als hij buiten bereik is
-    if (index < 0) {
-        index = images.length - 1;
-    } else if (index >= images.length) {
-        index = 0;
-    }
-
-    // Update de huidige index voor deze galerij
-    galleryIndices[galleryId] = index;
-
-    // Alle afbeeldingen verbergen en alleen de juiste afbeelding tonen
-    images.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
+    // Open de lightbox met de geselecteerde afbeelding
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImage.src = img.src; // Gebruik dezelfde afbeelding
+            lightboxImage.alt = img.alt;
+        });
     });
-}
 
-// Functie om naar de vorige afbeelding in de galerij te gaan
-function prevImage(galleryId) {
-    const currentIndex = galleryIndices[galleryId] || 0;
-    showImage(galleryId, currentIndex - 1);
-}
+    // Sluit de lightbox bij klik op het kruisje
+    closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
 
-// Functie om naar de volgende afbeelding in de galerij te gaan
-function nextImage(galleryId) {
-    const currentIndex = galleryIndices[galleryId] || 0;
-    showImage(galleryId, currentIndex + 1);
-}
-
-// Initialiseer elke galerij met de eerste afbeelding zichtbaar
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.gallery').forEach(gallery => {
-        const galleryId = gallery.getAttribute('data-gallery');
-        galleryIndices[galleryId] = 0; // Begin bij de eerste afbeelding
-        showImage(galleryId, 0); // Toon de eerste afbeelding
+    // Sluit de lightbox als er buiten de afbeelding wordt geklikt
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
     });
 });
+
+
 
 // Script voor de "Naar boven" knop
 document.addEventListener("DOMContentLoaded", function() {
