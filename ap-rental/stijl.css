@@ -130,6 +130,25 @@ main.content {
 
 
 
+.voorwaardenTekst {
+    text-align: center;
+    padding: 1rem 0 1.5rem 0;
+}
+
+.voorwaardenTekst a {
+    font-style: italic;
+    color: black;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.voorwaardenTekst a:hover {
+    text-decoration: underline;  /* Onderstreping bij hover */
+}
+
+
+
 /* Media query voor grotere schermen */
 @media (min-width: 768px) {
     header {
@@ -209,29 +228,3 @@ main.content {
 }
 
 
-
-
-@media only screen and (max-width: 1142px) {
-    footer {
-        padding: 20px 10% 20px 5%;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    footer {
-        padding: 20px 7% 20px 7%;
-        height: 19rem;
-        gap: 0px;
-    }
-    
-    .footer-links {
-        height: 100%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(10, 1fr);
-        width: 100%;
-    }
-
-    .footer-links a:nth-child(3) {
-        grid-column: 1/2;
-    }
-}

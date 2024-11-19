@@ -104,8 +104,8 @@ body {
 }
 
 .containerProducten {
-    max-width: 80vw;
-    margin: 2rem auto;
+    max-width: 70vw;
+    margin: 2rem;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -151,10 +151,10 @@ body {
     font-family: sans-serif;
 }
 
-.product-info a {
-    text-decoration: none;       /* Verwijdert standaard onderstreping */
+.product-info a, .naamProduct {
+    text-decoration: none;
     color: #444;
-    font-size: 1.4em;
+    font-size: 1.8em;
     margin: 0 0 30px;
     font-weight: 600;
 }
@@ -213,11 +213,27 @@ body {
 
   
 
-
 .product-info p {
     line-height: 1.6;
     margin: 10px 0 0 0;
 }
+
+
+
+
+
+
+.product-info .productBeschrijving {
+    margin: 0px 0 0 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.product-info .prijs {
+    margin: 9px 0 0 0;
+}
+
+
 
 .product:hover {
     background-color: #f5f5f5;
@@ -241,6 +257,7 @@ body {
     font-size: 18px;
     color: #666;
 }
+
 
 
 
@@ -328,6 +345,7 @@ body {
 .voorwaardenTekst a:hover {
     text-decoration: underline;  /* Onderstreping bij hover */
 }
+
 
 
 /* Stijling voor de "Naar boven" knop */
