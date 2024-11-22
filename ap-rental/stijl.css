@@ -225,6 +225,7 @@ main.content {
     .image-link:nth-of-type(4) img {
         content: url("../images/SFX 2-1.png");
     }
+    .image-link:nth-of-type(5) img {
+        content: url("../images/TRUSS 2-1.png");
+    }
 }
-
-
