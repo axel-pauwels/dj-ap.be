@@ -384,8 +384,13 @@ body {
         font-size: 2.5rem;
     }
     .gallery {
-        max-width: 35%;
+        max-width: 40%;
         margin: 0 3rem;
+    }
+    .containerProducten {
+        max-width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 
@@ -397,6 +402,7 @@ body {
     .containerProducten {
         max-width: 80%;
         padding: 5%;
+        margin: 3%
     }
     .product {
         flex-direction: column;
@@ -423,8 +429,8 @@ body {
     }
     .containerProducten {
         max-width: 100%;
-        padding: 5%;
-        padding-top: 0;
+        padding: 2%;
+        margin: 0;
     }
     .gallery {
         max-width: 100%;
