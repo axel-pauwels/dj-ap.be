@@ -90,7 +90,6 @@ p {
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    padding: 20px;
 }
 
 
@@ -142,7 +141,7 @@ p {
 
 
 .gegevens {
-    margin-top: 10rem;
+    margin-top: 5rem;
     gap: 50px;
     font-size: 18px;
     text-align: center;
