@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-fetch('../form/index.html')
+fetch('../form/contactForm.html')
 .then(response => response.text())
 .then(data => {
   document.getElementById('form').innerHTML = data;

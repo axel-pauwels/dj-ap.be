@@ -1,0 +1,387 @@
+/* Basisinstellingen */
+body {
+    display: flex;              
+    flex-direction: column;      
+    align-items: center;         
+    margin: 0;                  
+    font-family: 'CoFo Sans', sans-serif; 
+    background-color: #FFF; 
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 20px 1rem 30px;
+    background-color: black;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+.logo a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-size: 1.75em;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1vw;
+    padding: 0;
+    margin: 0;
+    align-items: center;  /* Zorg ervoor dat de items verticaal gecentreerd zijn */
+    height: 100%;         /* Zorg ervoor dat de hoogte van de lijst de volledige header vult */
+}
+
+.nav-links a {
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;  /* Centreer de tekst in de links */
+    height: 100%;         /* Zorg ervoor dat de link de volledige hoogte van de header vult */
+    padding: 0 10px;      /* Voeg wat horizontale padding toe voor ruimte rondom de tekst */
+}
+
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Stijl voor de link rondom het logo */
+.logo a {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 270px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
+}
+  
+  /* Stijl voor de afbeelding zelf */
+.logo a img {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
+}
+
+
+/* Stijl voor de link rondom het logo */
+.APRENTALLogo {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 100px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
+}
+  
+  /* Stijl voor de afbeelding zelf */
+.APRENTALLogo {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
+}
+
+
+
+
+
+
+.algemeneVoorwaarden a{
+    font-style: italic;
+}
+
+
+h1 {
+    margin-top: 1.5rem;
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    font-family: Ubuntu;
+    font-weight: 500;
+}
+
+
+#modal {
+    display: none;                /* Standaard verborgen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.hoofdContainer {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10rem;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.photo {
+    text-align: center;
+    width: 30%;
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #777;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: ubuntu;
+}
+
+.download-btn:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+/* Stijl voor het modaalvenster */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+
+
+
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+}
+
+.to-top.visible {
+    display: block;
+}
+
+.to-top:hover {
+    background-color: #555;
+}
+
+
+.actief {
+    text-decoration: underline;
+}
+
+
+
+@media (min-width: 868px) {
+    /* Toon de navigatielinks */
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    /* Verberg het hamburger menu */
+    .hamburger {
+        display: none;
+    }
+
+    /* Zorg dat de logo links staat en navigatielinks rechts */
+    header {
+        justify-content: space-between;
+    }
+}
+
+/* Media query voor kleinere schermen */
+@media (max-width: 867px) {
+    /* Logo centreren */
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Uitlijnen hamburger icon naar rechts */
+    .hamburger {
+        position: absolute;
+        right: 20px;
+    }
+
+    /* Open het menu als het actief is */
+    .nav-links.active {
+        display: block;
+        position: fixed;
+        top: 70px;                     /* Plaatsing onder de header */
+        right: 0;
+        width: 300px;
+        background-color: #333;
+        padding: 0 0;
+        text-align: right;
+        border-radius: 4px 0 0 6px;
+        box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
+    }
+
+    
+    .nav-links li {
+        z-index: 50;
+        padding: 10px 20px;
+        border-bottom: 1px solid #444; /* Voeg onderlijnen toe */
+    }
+    
+    .nav-links li:last-of-type {
+        border-bottom: none;
+    }
+
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .hoofdContainer {
+        width: 85%;
+    }
+}
+
+.nav-links .actief {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 700px) {
+    .hoofdContainer {
+        width: 100%;
+    }
+    .photo {
+        text-align: center;
+        width: 35%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .hoofdContainer {
+        width: 100%;
+    }
+    .gallery{
+        gap: 0;
+    }
+    .photo {
+        text-align: center;
+        width: 70%;
+    }
+}
