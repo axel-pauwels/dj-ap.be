@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="stijl.css">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="containerContactForm">
+    <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+
+    <p class="formNaam">Voornaam + Achternaam:</p>
+    <input type="text" name="naam" required>
+    <p class="formNaam">Email-adres:</p>
+    <input type="email" name="email" required>
+    <p class="formNaam">Bericht</p>
+    <textarea name="message" required></textarea>
+
+    <p>Geslacht:</p>
+    <label><input type="radio" name="geslacht" value="man" required> Man</label>
+    <label><input type="radio" name="geslacht" value="vrouw" required> Vrouw</label>
+    <label><input type="radio" name="geslacht" value="anders" required> Anders</label>
+
+    <p for="datum">Kies een datum:</p>
+    <input type="date" id="datum" name="datum">
+
+    <p for="land">Kies je land:</p>
+    <select id="land" name="land" required>
+      <option value="nederland">Nederland</option>
+      <option value="belgie">België</option>
+      <option value="duitsland">Duitsland</option>
+    </select>
+
+    <p>
+      <input type="checkbox" name="voorwaarden" required>
+      Ik ga akkoord met de voorwaarden
+    </p>
+    
+
+
+    <button type="submit">Verzend</button>
+  </form>
+</div>
+
+</body>
+</html>

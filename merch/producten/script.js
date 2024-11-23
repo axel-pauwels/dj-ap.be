@@ -82,3 +82,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+
+fetch('../../form/contactForm.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('form').innerHTML = data;
+})
+.catch(error => console.error('Error loading form:', error));

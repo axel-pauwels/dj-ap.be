@@ -1,9 +1,11 @@
-
-  
-  .containerContactForm {
+.containerContactForm {
     max-width: 700px;
     margin: 50px auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(43, 70, 70, 0.1);
   }
   
   .containerContactForm p {
@@ -11,9 +13,16 @@
     font-weight: 400;
   }
   
+  .containerContactForm label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
   .containerContactForm input[type="text"],
   .containerContactForm input[type="email"],
-  .containerContactForm textarea {
+  .containerContactForm textarea,
+  .containerContactForm input[type="date"],
+  .containerContactForm select {
     width: 90%;
     padding: 10px;
     margin-bottom: 15px;
@@ -25,6 +34,19 @@
   .containerContactForm textarea {
     height: 100px;
     resize: none;
+  }
+  
+  .containerContactForm input[type="radio"],
+  .containerContactForm input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .containerContactForm select {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 94%;
   }
   
   .containerContactForm button {
@@ -39,19 +61,28 @@
   }
   
   .containerContactForm button:hover {
-    background-color: #575656;
+    background-color: #474747;
   }
-
-
   
-@media (max-width: 768px) {
+  @media (max-width: 1100px) {
     .containerContactForm {
-        padding: 0;
+      padding: 10px;
+      margin-left: 3%;
+      margin-right: 3%;
     }
-
+  }
+  
+  @media (max-width: 768px) {
+    .containerContactForm {
+      padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
     .containerContactForm input[type="text"],
     .containerContactForm input[type="email"],
-    .containerContactForm textarea {
+    .containerContactForm textarea,
+    .containerContactForm select {
       width: 100%;
     }
-}
+  }  

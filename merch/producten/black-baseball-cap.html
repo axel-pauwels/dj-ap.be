@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../../reset.css">
 	<link rel="stylesheet" href="stijl-met-meerdere-fotos.css">
 	<link rel="stylesheet" href="../../footer.css">
+	<link rel="stylesheet" href="../../form/stijlMerch.css">
 
 	<link rel="icon" type="image/x-icon" href="../../images/DJAP_logo1-wit-op-zwart.ico">
 	<script src="script.js" defer></script>
@@ -21,16 +22,16 @@
 <body>
     <header>
         <div class="logo">
-            <a href="../index.html">
+            <a href="../">
                 <img src="../../images/DJAP_logo1-wit-CROPPED.png" alt="DJ AP">
             </a>
         </div>
         <nav class="nav-links" id="nav-links">
             <ul>
-                <li><a href="../referenties-info/index.html">REFERENTIES & INFO</a></li>
-                <li><a class="actief" href="../index.html">MERCH</a></li>
-                <li><a href="../contact/index.html">CONTACT</a></li>
-                <li><a href="../ap-rental/index.html">
+                <li><a href="../referenties-info/">REFERENTIES & INFO</a></li>
+                <li><a class="actief" href="../">MERCH</a></li>
+                <li><a href="../contact/">CONTACT</a></li>
+                <li><a href="../ap-rental/">
 					<img src="../../images/AP-RENTAL-wit.png" class="APRENTALLogo" alt="AP RENTAL">
 				</a></li>
             </ul>
@@ -45,7 +46,7 @@
 
 
     <div class="containerProducten">
-        <a class="info" href="../index.html">Ga terug</a> <!-- .info buiten de gallery -->
+        <a class="info" href="../">Ga terug</a> <!-- .info buiten de gallery -->
         <div class="product">
             <div class="gallery" data-gallery="1">
                 <img src="../../images/DJ-AP_cap-FRONT.png" alt="DJ AP BLACK CAP FRONT" class="gallery-image active">
@@ -64,6 +65,22 @@
                         <p>Geborduurd logo</p>
                         <p>Materiaal: 100% katoen</p>
                     </div>
+                </div>
+                <div class="containerContactForm">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+                    <input type="hidden" name="model" value="Baseball Cap">
+
+                    <p class="bestelNu">Bestel nu:</p>
+                    <p class="formNaam">Voornaam + Achternaam:</p>
+                    <input type="text" name="naam" required>
+                    <p class="formNaam">Email-adres:</p>
+                    <input type="email" name="email" required>
+                    <p for="aantal">Aantal:</p>
+                    <input type="number" id="aantal" name="aantal" min="1" max="100" value="1" required>
+
+                    <button type="submit">Bestel</button>
+                  </form>
                 </div>
             </div>
         </div>
@@ -88,15 +105,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="../../index.html">Home DJ AP</a>
-            <a href="../../referenties-info/index.html">Info & Referenties</a>
+            <a href="../../">Home DJ AP</a>
+            <a href="../../referenties-info/">Info & Referenties</a>
             <a class="actief" href="#">Merch</a>
-            <a href="../../ap-rental/index.html">Home AP Rental</a>
-            <a href="../../ap-rental/licht/index.html">Licht</a>
-            <a href="../../ap-rental/lichtsets/index.html">Lichtsets</a>
-            <a href="../../ap-rental/speakersets/index.html">Speakersets</a>
-            <a href="../../ap-rental/sfx/index.html">SFX</a>
-            <a class="algemene-voorwaarden" href="../../ap-rental/algemene-voorwaarden/index.html">algemene voorwaarden</a>
+            <a href="../../ap-rental/">Home AP Rental</a>
+            <a href="../../ap-rental/licht/">Licht</a>
+            <a href="../../ap-rental/lichtsets/">Lichtsets</a>
+            <a href="../../ap-rental/speakersets/">Speakersets</a>
+            <a href="../../ap-rental/sfx/">SFX</a>
+            <a href="../../ap-rental/truss/">Truss</a>
+            <a class="algemene-voorwaarden" href="../../ap-rental/algemene-voorwaarden/">algemene voorwaarden</a>
         </div>
 
         <div class="footer-center">
@@ -110,8 +128,6 @@
             <a href="https://vi.be/platform/DJAP" target="_blank">vi.be</a>
             <a href="mailto:bookings.DJAP@gmail.com">Mail</a>
         </div>
-    
-
     </footer>
     
     

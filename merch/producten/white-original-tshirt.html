@@ -6,6 +6,8 @@
     <title>DJ AP - MERCH</title>
 	<link rel="stylesheet" href="../../reset.css">
 	<link rel="stylesheet" href="stijl-met-meerdere-fotos.css">
+	<link rel="stylesheet" href="../../form/stijlMerch.css">
+
 	<link rel="icon" type="image/x-icon" href="../../images/DJAP_logo1-wit-op-zwart.ico">
 	<script src="script.js" defer></script>
 
@@ -72,6 +74,29 @@
                         <p>Materiaal: 100% katoen, 100% beerproof</p>
                         <p>Beschikbare kleuren: wit en <a href="black-original-tshirt.html">zwart</a></p>
                     </div>
+                </div>
+                <div class="containerContactForm">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+                    <input type="hidden" name="model" value="White Original Tshirt">
+
+                    <p class="bestelNu">Bestel nu:</p>
+                    <p class="formNaam">Voornaam + Achternaam:</p>
+                    <input type="text" name="naam" required>
+                    <p class="formNaam">Email-adres:</p>
+                    <input type="email" name="email" required>
+                    <p for="land">Maat:</p>
+                    <select id="maat" name="maat" required>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="L">XL</option>
+                    </select>
+                    <p for="aantal">Aantal:</p>
+                    <input type="number" id="aantal" name="aantal" min="1" max="100" value="1" required>
+
+                    <button type="submit">Bestel</button>
+                  </form>
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../../reset.css">
 	<link rel="stylesheet" href="stijl-met-meerdere-fotos.css">
 	<link rel="stylesheet" href="../../footer.css">
+	<link rel="stylesheet" href="../../form/stijlMerch.css">
     
 	<link rel="icon" type="image/x-icon" href="../../images/DJAP_logo1-wit-op-zwart.ico">
 	<script src="script.js" defer></script>
@@ -63,9 +64,27 @@
                     <div class="detailsElementen">
                         <p>Dikke stoffen pet</p>
                         <p>Zachte, niet versterkte voorkant</p>
-                        <p>metsluiting achteraan</p>
+                        <p>Metalen sluiting achteraan</p>
                         <p>Niet wasbaar</p>
                     </div>
+                </div>
+                <div class="containerContactForm">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+                    <input type="hidden" name="model" value="Cord Cap">
+
+                    <p class="bestelNu">Bestel nu:</p>
+                    <p class="formNaam">Voornaam + Achternaam:</p>
+                    <input type="text" name="naam" required>
+                    <p class="formNaam">Email-adres:</p>
+                    <input type="email" name="email" required>
+                    <p for="aantal">Aantal:</p>
+                    <input type="number" id="aantal" name="aantal" min="1" max="100" value="1" required>
+
+
+
+                    <button type="submit">Bestel</button>
+                  </form>
                 </div>
             </div>
         </div>

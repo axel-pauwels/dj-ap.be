@@ -1,0 +1,112 @@
+.containerContactForm {
+  max-width: 700px;
+  font-family: Ubuntu;
+}
+
+.containerContactForm p {
+  margin: 5px 0;
+  font-weight: 500;
+  color: #444
+}
+
+.containerContactForm .bestelNu {
+  font-size: 24px;
+}
+
+.containerContactForm input[type="text"],
+.containerContactForm input[type="email"],
+.containerContactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.containerContactForm label {
+  display: block; /* Zorgt ervoor dat het label boven het inputveld komt */
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+.containerContactForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.containerContactForm textarea {
+  height: 100px;
+  resize: none;
+}
+
+.containerContactForm input[type="radio"],
+.containerContactForm input[type="checkbox"] {
+  display: block; /* Zorgt ervoor dat het label boven het inputveld komt */
+  margin-right: 5px;
+}
+
+.containerContactForm input[type="number"] {
+  width: 5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block; /* Zorgt ervoor dat het label boven het inputveld komt */
+}
+
+
+.containerContactForm select {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  width: 5rem;
+}
+
+.containerContactForm button {
+  background-color: #777;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.containerContactForm button:hover {
+  background-color: #474747;
+}
+
+@media (max-width: 1300px) {
+  .containerContactForm {
+    max-width: 100%
+  }
+}
+
+
+@media (max-width: 768px) {
+  .containerContactForm {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .containerContactForm input[type="text"],
+  .containerContactForm input[type="email"],
+  .containerContactForm textarea,
+  .containerContactForm select {
+    width: 100%;
+  }
+}  
