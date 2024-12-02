@@ -202,11 +202,6 @@ body {
     opacity: 1;
 }
 
-.productBeschrijving p {
-    font-weight: 500;
-    color: red
-}
-
 .product-info p {
     line-height: 1.6;
     margin: 10px 0 0 0;
@@ -239,13 +234,25 @@ body {
     color: #666;
 }
 
-.bekabeling {
+.bekabeling, .inbegrepen {
     padding-top: .6rem;
+}
+
+.inbegrepen {
+    font-weight: 600;
 }
 
 .containerProducten ul ul{
     margin-left: 1rem;
 }
+
+.productBeschrijving {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 0;
+    padding-bottom: .75rem;
+}
+
 
 /* Galerij container */
 .gallery {
