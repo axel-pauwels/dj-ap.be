@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="stijl.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="containerContactForm">
+  <h3>Vraag hieronder uw verhuur aan en wij contacteren u snel terug!</h3>
+
+  <form action="https://api.web3forms.com/submit" method="POST" id="form">
+    <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+
+    <div class="namenDiv">
+      <p class="formNaam">Voornaam:<span class="required">*</span></p>
+      <p class="formNaam">Achternaam:<span class="required">*</span></p>
+      <input type="text" name="naam" required>
+      <input type="text" name="achternaam" required>
+    </div>
+
+    <p class="formNaam">Email-adres:<span class="required">*</span></p>
+    <input type="email" name="email" required>
+
+    <p class="formNaam">Soort evenement:<span class="required">*</span></p>
+    <input type="text" name="soortevenement" required>
+
+    <p class="formNaam">Organisatie:</p>
+    <input type="text" name="organisatie">
+
+    <p class="formNaam">Gewenste huurdatum:<span class="required">*</span></p>
+    <input type="date" name="gewenste huurdatum" required>
+
+    <p class="formNaam">Locatie:<span class="required">*</span></p>
+    <input type="text" name="locatie" required>
+
+    <!-- Checkboxen met dropdowns -->
+    <p class="formNaam">Selecteer gewenste items:</p>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" id="BeamzS1800verticaalrookmachine(CO2-effect)" name="items[]" value="Beamz S1800 verticaal rookmachine (CO2 effect)"> Beamz S1800 verticaal rookmachine (CO2 effect)
+      </label>
+    </div>
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" id="StairvilleAFH-600DMXHazer" name="items[]" value="Stairville AFH-600 DMX Hazer"> Stairville AFH-600 DMX Hazer
+      </label>
+    </div>
+
+    <p id="formOpmkerkingen">Opmerkingen:</p>
+    <textarea name="opmerkingen" rows="6" placeholder="Voer hier uw opmerkingen in (optioneel)."></textarea>
+
+    <button type="submit">Vraag verhuur aan</button>
+    <div id="result"></div>
+  </form>
+</div>
+</body>
+</html>

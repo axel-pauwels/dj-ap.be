@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="stijl.css">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="containerContactForm">
+  <h3>Vraag hieronder u verhuur aan en wij contacteren u snel terug!</h3>
+
+  <form action="https://api.web3forms.com/submit" method="POST" id="form">
+    <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+
+    <div class="namenDiv">
+      <p class="formNaam">Voornaam:<span class="required">*</span></p>      
+      <p class="formNaam">Achternaam:<span class="required">*</span></p>
+      <input type="text" name="naam" required>
+      <input type="text" name="achternaam" required>
+    </div>
+
+    <p class="formNaam">Email-adres:<span class="required">*</span></p>
+    <input type="email" name="email" required>
+
+    <p class="formNaam">Soort evenement:<span class="required">*</span></p>
+    <input type="text" name="soortevenement" required>
+
+    <p class="formNaam">Organisatie:</p>
+    <input type="text" name="organisatie">
+    
+    <p class="formNaam">Gewenste huurdatum:<span class="required">*</span></p>
+    <input type="date" name="gewenste huurdatum" required>
+
+    <p class="formNaam">Locatie:<span class="required">*</span></p>
+    <input type="text" name="locatie" required>
+
+    <!-- Checkboxen met dropdowns -->
+    <p class="formNaam">Selecteer gewenste items:</p>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="PicoSpot" 
+               onchange="toggleAantal(this, 'aantalPicoSpot')"> Fun Generation PicoSpot 45 LED Movinghead
+      </label>
+      <div id="aantalPicoSpot" style="display:none;">
+        <label for="picoSpotAantal">Aantal:</label>
+        <select name="picoSpotAantal" id="picoSpotAantal">
+          <option value="">-- Kies aantal --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="LaserWorld 400mW Laser"> LaserWorld 400mW Laser
+      </label>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Ayra 444 LED Scanner"> Ayra 444 LED Scanner
+      </label>
+    </div>
+    
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Ayra LED Tri-Bar 12 RGB pixelbar" 
+               onchange="toggleAantal(this, 'aantalTriPixelBar12')"> Ayra LED Tri-Bar 12 RGB pixelbar
+      </label>
+      <div id="aantalTriPixelBar12" style="display:none;">
+        <label for="triPixelBar12Aantal">Aantal:</label>
+        <select name="triPixelBar12Aantal" id="triPixelBar12Aantal">
+          <option value="">-- Kies aantal --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Showtec LED Light Bar 8"> Showtec LED Light Bar 8
+      </label>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Ayra TDC Hybrid Beam LED Wash + Moonflower"> Ayra TDC Hybrid Beam LED Wash + Moonflower
+      </label>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Ayra Flash 30 LED Stroboscoop" 
+               onchange="toggleAantal(this, 'aantalFlash30')"> Ayra Flash 30 LED Stroboscoop
+      </label>
+      <div id="aantalFlash30" style="display:none;">
+        <label for="flash30Aantal">Aantal:</label>
+        <select name="flash30Aantal" id="flash30Aantal">
+          <option value="">-- Kies aantal --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Showtec LED Light Bar 8"> Ayra TDC Burst 6 LED Moonflower
+      </label>
+    </div>
+
+    <div class="formGroup">
+      <label>
+        <input type="checkbox" name="items[]" value="Showtec LED Light Bar 8"> Ayra TDC Sunrise
+      </label>
+    </div>
+
+    <p id="formOpmkerkingen">Opmerkingen:</p>
+    <textarea name="opmerkingen" rows="6" placeholder="Voer hier uw opmerkingen in (optioneel)."></textarea>
+
+    <button type="submit">Vraag verhuur aan.</button>
+    <div id="result"></div>
+  </form>
+</div>
+</body>
+</html>

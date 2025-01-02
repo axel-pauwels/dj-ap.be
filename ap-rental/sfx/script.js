@@ -82,3 +82,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+fetch('../../form-huren/contactFormSFX.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('form').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading form:', error));

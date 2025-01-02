@@ -246,8 +246,13 @@ body {
     margin-top: 5rem;
 }
 
-.prijs, .binnekortBeschikbaar, .specificaties, .inbegrepen, .aantalBeschikbaar span {
+.prijs, .binnekortBeschikbaar, .specificaties, .inbegrepen, .aantalBeschikbaar span, .combineerbaar {
     font-family: Ubuntu;
+}
+
+.combineerbaar {
+    font-weight: 500;
+    font-style: italic;
 }
 
 .binnekortBeschikbaar {
