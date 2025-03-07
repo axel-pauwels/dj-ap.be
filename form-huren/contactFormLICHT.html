@@ -114,12 +114,21 @@
       <label>
         <input type="checkbox" name="items[]" value="Showtec LED Light Bar 8"> Ayra TDC Burst 6 LED Moonflower
       </label>
-    </div>
+    </div>    
 
     <div class="formGroup">
       <label>
-        <input type="checkbox" name="items[]" value="Showtec LED Light Bar 8"> Ayra TDC Sunrise
+        <input type="checkbox" name="items[]" value="Sunrise" 
+               onchange="toggleAantal(this, 'aantalSunrise')"> Ayra TDC Sunrise
       </label>
+      <div id="aantalSunrise" style="display:none;">
+        <label for="aantalSunrise">Aantal:</label>
+        <select name="aantalSunrise" id="aantalSunrise">
+          <option value="">-- Kies aantal --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
     </div>
 
     <p id="formOpmkerkingen">Opmerkingen:</p>
