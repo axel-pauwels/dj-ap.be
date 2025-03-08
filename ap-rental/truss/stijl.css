@@ -15,7 +15,6 @@ body, html {
     flex-direction: column;
 }
 
-
 header {
     display: flex;
     position: fixed;
