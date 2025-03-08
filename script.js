@@ -42,18 +42,90 @@ const images = [
 const slideshowImage = document.getElementById("slideshow-image");
 let currentIndex = 0;
 
-// Functie om naar de volgende afbeelding te gaan
 function nextImage() {
     currentIndex = (currentIndex + 1) % images.length; // Zorg dat het opnieuw begint na de laatste afbeelding
     slideshowImage.src = images[currentIndex];
 }
-
-// Wissel de afbeelding om de 5 seconden
 setInterval(nextImage, 5000);
 
 
 
-// Script voor de "Naar boven" knop
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Smooth scroll voor directe klikken op de pagina
+//     document.getElementById("scrollInfo")?.addEventListener("click", function(event) {
+//         event.preventDefault();
+//         document.getElementById("info")?.scrollIntoView({ behavior: "smooth" });
+//     });
+
+//     document.getElementById("scrollReferenties")?.addEventListener("click", function(event) {
+//         event.preventDefault();
+//         document.getElementById("referenties")?.scrollIntoView({ behavior: "smooth" });
+//     });
+
+//     document.getElementById("scrollPictures")?.addEventListener("click", function(event) {
+//         event.preventDefault();
+//         document.getElementById("pictures")?.scrollIntoView({ behavior: "smooth" });
+//     });
+
+//     document.getElementById("scrollContact")?.addEventListener("click", function(event) {
+//         event.preventDefault();
+//         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+//     });
+
+//     // Check bij het laden van de pagina of er een fragment-ID in de URL staat
+//     const hash = window.location.hash;
+//     if (hash) {
+//         const target = document.querySelector(hash);
+//         if (target) {
+//             target.scrollIntoView({ behavior: 'smooth' });
+//         }
+//     }
+// });
+
+
+// // Bij het laden van de pagina, de hash uitlezen en er naartoe scrollen
+// window.addEventListener("load", function() {
+//     const hash = window.location.hash;
+//     if (hash) {
+//         const target = document.querySelector(hash);
+//         if (target) {
+//             target.scrollIntoView({ behavior: "smooth" });
+//         }
+//     }
+// });
+
+
+
+
+// PICTURES
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const thumbnails = document.querySelectorAll('.thumbnail');
+const closeBtn = document.querySelector('.close');
+
+thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = thumbnail.src;
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+
+
+
+
+
+// TO TOP KNOP
 document.addEventListener("DOMContentLoaded", function() {
     const toTopButton = document.createElement("button");
     toTopButton.textContent = "Naar boven";
@@ -75,3 +147,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// CONTACT FORM
+fetch('../form/contactForm.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('form').innerHTML = data;
+})
+.catch(error => console.error('Error loading form:', error));

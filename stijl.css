@@ -1,11 +1,11 @@
 /* Basisinstellingen */
 body {
-    display: flex;              
-    flex-direction: column;      
-    align-items: center;         
-    margin: 0;                  
-    font-family: 'CoFo Sans', sans-serif; 
-    background-color: #FFF; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'CoFo Sans', sans-serif;
+    background-color: #FFF;
 }
 
 
@@ -15,6 +15,7 @@ body, html {
     min-height: 100vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -205,8 +206,409 @@ header {
 
 
 
+.container {
+    min-width: 75%;
+    margin: 20px auto;
+    padding: 0 20px;
+    background: #fff;
+}
 
 
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    font-family: Ubuntu;
+    font-weight: 500;
+    scroll-margin-top: 80px; /* Pas de waarde aan op basis van je header hoogte */
+    padding-top: 2.5rem;
+}
+
+
+h2 {
+    color: #444;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+
+.containerInfo {
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    font-family: Ubuntu;
+    margin-bottom: 5rem;
+}
+
+
+.containerInfo p {
+    color: #555;
+    margin: 8px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.6rem;
+}
+
+
+
+.sections-container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 20px auto;
+    padding: 0 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Ubuntu;
+    background-color: #fff;
+}
+
+
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 8px;
+    
+}
+
+.section li {
+    margin-bottom: 8px;
+    padding: 6px;
+}
+
+.section li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: white;
+    border-radius: 4px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.section li a:hover {
+    text-decoration: underline;
+    color: #222;
+}
+
+
+
+
+/*   ----- PICTURES -----   */
+
+#modal {
+    display: none;                /* Standaard verborgen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.hoofdContainer {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.photo {
+    text-align: center;
+    width: 30%;
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #777;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: ubuntu;
+}
+
+.download-btn:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+
+
+/*   ----- CONTACT ----- */
+.containerContact{
+    padding-top: 2rem;
+    text-align: center;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+
+.containerContact .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.containerContact .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerContact .mailAdres, .instagram {
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    margin-top: .8rem;
+}
+
+
+.containerContact .contact-btn {
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.email-btn {
+    background-color: #777;
+}
+
+.email-btn:hover {
+    background-color: #0056b3;
+}
+
+.instagram-btn {
+    background-color: #777;
+}
+
+.instagram-btn:hover {
+    background-color: #c13545;
+}
+
+
+
+
+.containerContactForm {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .containerContactForm p {
+    margin: 10px 0 5px;
+    font-weight: 400;
+  }
+  
+  .containerContactForm label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .containerContactForm input[type="text"],
+  .containerContactForm input[type="email"],
+  .containerContactForm textarea,
+  .containerContactForm input[type="date"],
+  .containerContactForm select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .containerContactForm textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .containerContactForm input[type="radio"],
+  .containerContactForm input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .containerContactForm select {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 94%;
+  }
+  
+  .containerContactForm button {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .containerContactForm button:hover {
+    background-color: #474747;
+  }
+  
+  @media (max-width: 1100px) {
+    .containerContactForm {
+      padding: 10px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .containerContactForm {
+      padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .containerContactForm input[type="text"],
+    .containerContactForm input[type="email"],
+    .containerContactForm textarea,
+    .containerContactForm select {
+      width: 100%;
+    }
+  }
+
+
+  
+.gegevens {
+    margin-top: 16px;
+    gap: 50px;
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+
+.gegevens div {
+    justify-content: center;
+    align-items: center;
+}
+
+.gegevens div p {
+    line-height: 1.5rem;
+}
+
+
+/*   ----- TO TOP -----   */
 
 .to-top {
     position: fixed;
@@ -323,5 +725,121 @@ header {
     .nav-links ul {
         flex-direction: column;
         gap: 1px;
+    }
+}
+
+
+
+/* Responsive opmaak */
+@media only screen and  (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and  (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1142px){
+    .containerInfo {
+        width: 80vw;
+    }
+    footer {
+        padding: 20px 10% 20px 5%;
+    }
+    
+    .sections-container {
+        max-width: 90%;
+    }
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    .containerInfo {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    footer {
+        padding: 20px 7% 20px 7%;
+        height: fit-content;
+        gap: 0px;
+    }
+    
+    .footer-links {
+        height: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        width: 100%;
+    }
+
+    .footer-links a:nth-child(3) {
+        grid-column: 1/2;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .containerInfo {
+        width: 90%;
+    }
+    
+    .logo2 a {
+        height: 7vw; /* Pas de hoogte aan voor een kleiner logo */
+    }
+    .logo2 {
+        display: flex;
+        justify-content: center; /* Zorgt ervoor dat het logo in het midden staat */
+    }
+    .containerInfo {
+        width: 95%;
+    }
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .logo2 {
+        display: flex;
+        justify-content: center;
+    }
+    .logo2 a {
+        height: 31px; /* Pas de hoogte aan voor een kleiner logo */
     }
 }
