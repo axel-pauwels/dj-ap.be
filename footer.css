@@ -98,7 +98,7 @@ footer {
         width: 100%;
     }
 
-    .footer-links a:nth-child(3) {
+    .footer-links a:nth-child(5) {
         grid-column: 1/2;
     }
 }

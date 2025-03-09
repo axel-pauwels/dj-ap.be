@@ -182,19 +182,19 @@ header {
 
 
 
-/* Slideshow CSS */
+/* Slideshow */
 .slideshow {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh; /* Neem 80% van de viewport hoogte */
+    height: 80vh;
     overflow: hidden;
-    margin-top: 120px; /* ruimte onder de header */
+    margin-top: 120px;
 }
 
 .slideshow img {
-    max-width: 100%;
+    max-width: 96%;
     max-height: 100%;
     object-fit: cover;
     border-radius: 8px;
@@ -448,6 +448,10 @@ h2 {
     margin-top: 1rem;
 }
 
+.containerContact p:nth-child(1) {
+    margin-bottom: 1rem;
+}
+
 
 .containerContact .contact-links {
     display: flex;
@@ -501,7 +505,7 @@ h2 {
 .containerContactForm {
     max-width: 700px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 0 0 20px 0;
   }
   
   .containerContactForm p {
@@ -634,33 +638,6 @@ h2 {
 
 
 
-/* Responsieve aanpassing voor verschillende schermgroottes */
-@media screen and (min-width: 1300px) {
-    .HOMEAfbeelding43 {
-        width: 22%;  /* Vier afbeeldingen naast elkaar */
-    }
-    .HOMEAfbeelding34 {
-        width: 22%  /* Twee afbeeldingen naast elkaar */
-    }
-}
-
-@media screen and (max-width: 1299px) and (min-width: 800px) {
-    .HOMEAfbeelding43 {
-        width: 45%;  /* Twee afbeeldingen naast elkaar */
-    }
-    .HOMEAfbeelding34 {
-        width: 21.92%;  /* Twee afbeeldingen naast elkaar */
-    }
-}
-
-@media screen and (max-width: 799px) {
-    .HOMEAfbeelding43 {
-        width: 80%;  /* Eén afbeelding per rij */
-    }
-    .HOMEAfbeelding34 {
-        width: 40%;  /* Twee afbeeldingen naast elkaar */
-    }
-}
 
 
 
@@ -726,6 +703,10 @@ h2 {
         flex-direction: column;
         gap: 1px;
     }
+
+    .slideshow{
+        height: auto;
+    }
 }
 
 
@@ -778,7 +759,6 @@ h2 {
     footer {
         padding: 20px 10% 20px 5%;
     }
-    
     .sections-container {
         max-width: 90%;
     }
@@ -801,14 +781,12 @@ h2 {
         height: fit-content;
         gap: 0px;
     }
-    
     .footer-links {
         height: fit-content;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
         width: 100%;
     }
-
     .footer-links a:nth-child(3) {
         grid-column: 1/2;
     }
@@ -819,7 +797,6 @@ h2 {
     .containerInfo {
         width: 90%;
     }
-    
     .logo2 a {
         height: 7vw; /* Pas de hoogte aan voor een kleiner logo */
     }
@@ -832,8 +809,6 @@ h2 {
     }
 }
 
-
-
 @media only screen and (max-width: 450px) {
     .logo2 {
         display: flex;
@@ -841,5 +816,38 @@ h2 {
     }
     .logo2 a {
         height: 31px; /* Pas de hoogte aan voor een kleiner logo */
+    }
+}
+
+
+/* PICTURES + CONTACT*/
+
+@media (max-width: 700px) {
+    .hoofdContainer {
+        width: 100%;
+    }
+    .photo {
+        text-align: center;
+        width: 35%;
+    }
+    .containerContact{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .hoofdContainer {
+        width: 100%;
+    }
+    .containerContact{
+        width: 100%;
+    }
+    .gallery{
+        gap: 0;
+    }
+    .photo {
+        text-align: center;
+        width: 70%;
     }
 }
