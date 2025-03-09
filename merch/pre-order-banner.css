@@ -1,0 +1,39 @@
+.banner {
+    background-color: red;
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 5.5rem;
+    left: 0;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.banner-content-wrapper {
+    display: flex;
+    width: fit-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+.banner-content {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0); /* Begin direct zichtbaar */
+    }
+    to {
+        transform: translateX(-50%); /* Laat maar de helft schuiven voor een vloeiende loop */
+    }
+}
+
+
+
+.container{
+    margin-top: 10rem;
+}
