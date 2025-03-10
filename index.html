@@ -13,72 +13,263 @@
 
 
 
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Rental</title>
-    <link rel="stylesheet" href="reset.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="stijl.css">
-    <link rel="icon" type="image/x-icon" href="../images/AP-RENTAL-logo_wit-op-zwart_1-1.ico">
-	<script src="{{ url_for('static', filename='APrental/script.js') }}" defer></script>
+	<link rel="stylesheet" href="footer.css">
     
+
+	
+	<script src="script.js" defer></script>
+	<link rel="icon" type="image/x-icon" href="images/DJAP_logo1-wit-op-zwart.ico">
+	<title>DJ AP</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
 
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7B9NHFR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- HEADER -->
     <header>
-        <div class="logo2">
-            <a href="../">
-                <img src="../images/DJAP_logo1-wit-CROPPED.png"alt="DJ AP LOGO">
+        <div class="logo">
+            <a href="/index.html#">
+                <img src="images/DJAP_logo1-wit-CROPPED.png" alt="DJ AP">
             </a>
         </div>
-        <div class="logo1">
-            <a href="#">
-                <img src="../images/AP-RENTAL-wit.png" alt="AP RENTAL">
-            </a>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="/index.html#info">INFO</a></li>
+                <li><a href="/index.html#referenties">REFERENTIES</a></li>
+                <li><a href="/index.html#pictures">PICTURES</a></li>
+                <!-- <li><a href="merch/">MERCH</a></li> -->
+                <li><a href="/index.html#contact">CONTACT</a></li>
+                <li><a href="ap-rental/">
+					<img src="images/AP-RENTAL-wit.png" class="APRENTALLogo" alt="AP RENTAL">
+				</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
 
+    <!-- SLIDESHOW -->
+    <div class="slideshow" id="slideshow">
+        <img src="images/DJAPDVJ-6.jpg" alt="DJ AP Slideshow" id="slideshow-image">
+    </div>
 
-    <main class="content">
-        <div class="image-links">
-            <a href="licht/" class="image-link">
-                <picture>
-                    <source media="(max-width: 1200px)" srcset="../images/LICHT 3-2.png">
-                    <img src="../images/LICHT V2.png" alt="LICHT COVER 1200px">
-                </picture>
-            </a>
-            <a href="lichtsets/" class="image-link">
-                <picture>
-                    <source media="(max-width: 1200px)" srcset="../images/LICHTSETS 3-2.png">
-                    <img src="../images/LICHTSETS.png" alt="LICHTSETS COVER 1200px">
-                </picture>
-            </a>
-            <a href="speakersets/" class="image-link">
-                <picture>
-                    <source media="(max-width: 1200px)" srcset="../images/SPEAKERSETS 3-2.png">
-                    <img src="../images/SPEAKERS.png" alt="SPEAKERSETS COVER 1200px">
-                </picture>
-            </a>
-            <a href="sfx/" class="image-link">
-                <picture>
-                    <source media="(max-width: 1200px)" srcset="../images/SFX 3-2.png">
-                    <img src="../images/SFX.png" alt="SFX COVER 1200px">
-                </picture>
-            </a>
-            <a href="truss/" class="image-link">
-                <picture>
-                    <source media="(max-width: 1200px)" srcset="../images/SFX 3-2.png">
-                    <img src="../images/TRUSS 5-1.png" alt="TRUSS COVER 1200px">
-                </picture>
-            </a>
+
+    <!-- INFO -->
+    <div class="container">
+        <h1 id="info">Info</h1>
+        <div class="containerInfo">
+            <p>DJ AP (Axel Pauwels) is een jonge, 19-jarige DJ uit Schoten, die met zijn ruime stijl steeds meer naam maakt in de Antwerpse muziekscene en daarbuiten. Zijn sets zijn een unieke mix van energieke genres waarmee hij een breed publiek aanspreekt en de vibe van elk feest of evenement aanvoelt.</p>
+            <p>Axel Pauwels is niet alleen een DJ maar ook een creatieve kracht die eigen edits, mashups en remixes maakt. Deze unieke bewerkingen zorgen voor en persoonlijke touch tijdens zijn optredens, waarmee hij het publiek telkens weer weet te verrassen en in beweging te krijgen. Zijn veelzijdigheid en muzikale aanpassingen maken hem tot een favoriet voor een breed publiek.</p>
+            <p>De persoon achter DJ AP, Axel, is op jonge leeftijd in aanraking gekomen met muziek. Hij begon zijn muzikale carrière als drummer en pure passie voor muziek en het gevoel dat deze teweegbrengt. Inmiddels werkt hij continu aan zijn eigen stijl en sound, altijd met de focus op het verrassen van zijn publiek. Hij heeft al verschillende keren gedraaid in populaire zalen en locaties zoals IKON, Kavka Oudaan, JH AHOY, JC Bouckenborgh, ... </p>
         </div>
-    </main>
 
-    <p class="voorwaardenTekst"><a href="algemene-voorwaarden/">bij het huren van materiaal gaat u akkoord met de algemene voorwaarden</a></p>
+        <!-- REFERENTIES -->
+        <h1 id="referenties">Referenties</h1>
+
+            <div class="sections-container">
+                <div class="section">
+                    <ul>
+                        <li><a href="https://www.facebook.com/events/349016901143827">Het Grote Laatste 100 Dagen Feest @ IKON</a></li>
+                        <li><a href="https://www.facebook.com/events/836501471963283">Nacht van de Jeugdbeweging</a></li>
+                        <li><a href="https://www.facebook.com/events/514096614344331/">Chirofuif Schilde</a></li>
+                        <li><a href="https://www.instagram.com/dejabu_2024/">Déjà Bu @ Kavka Oudaan</a></li>
+                        <li><a href="https://www.facebook.com/events/960056709058475">Afgestudeerd Feest @ IKON</a></li>
+                        <li><a href="https://www.facebook.com/events/510864788277267/">Bal van de Brandweer</a></li>
+                        <li><a href="https://www.facebook.com/events/764813358073865">Chirofuif Wijnegem @ JH AHOY</a></li>
+                        <li><a href="https://www.facebook.com/events/335506329397374">MYA$$PI</a></li>
+                        <li><a href="https://www.facebook.com/events/986635896125777">Twentyfoor @ JC BOUCKENBORGH</a></li>
+                        <li><a href="https://www.facebook.com/events/1052622609553686">HEISA @ JC BOUCKENBORGH</a></li>
+                        <li><a href="https://www.instagram.com/jcbouckenborgh/">Remise @ JC BOUCKENBORGH</a></li>
+                        <li><a href="https://www.facebook.com/events/246218755182920">CTRL-A @ JC BOUCKENBORGH</a></li>
+                        <li><a href="https://www.facebook.com/events/396354276822000">Light Me Up @ JC BOUCKENBORGH</a></li>
+                        <li><a href="https://www.instagram.com/bezopen_in_de_tropen">Fris aan de Vis</a></li>
+                        <li><a href="https://www.facebook.com/events/935502741937839">Hangover</a></li>
+                        <li><a href="https://www.facebook.com/events/1436072610575937">Can You Handle Wodka Jins 26+41</a></li>
+                        <li>Bedankingsfeest Jeugdbewegingen</li>
+                        <li><a href="https://www.facebook.com/events/182656841588750">Warmste Boît @ JH AHOY</a></li>
+                        <li><a href="https://www.facebook.com/events/261185837060602/">Parsiefiësta @ JH AHOY</a></li>
+                        <li><a href="https://www.instagram.com/p/C5x3y2_oCui/">Afterparty Woka Fest</a></li>
+                        <li><a href="https://www.instagram.com/annuntiaprom_2024/">PROMBAL Annuntia Wijnegem</a></li>
+                        <li><a href="https://www.instagram.com/balreginapacis_2024/">PROMBAL Regina Pacis</a></li>
+                        <li>PROMBAL Vita Et Pax</li>
+                        <li>PROMBAL Moretus</li>
+                        <li>PROMBAL Sint Ludgadis Merksem</li>
+                        <li>PROMBAL Sint Ludgardis Antwerpen @ IKON</li>
+                        <li>PROMBAL TA Brasschaat @ IKON</li>
+                        <li>PROMBAL Mater Dei @ IKON</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+
 
     
+
+    <!-- PICTURES -->
+    <h1 id="pictures">DJ AP Pictures</h1>
+    <div class="hoofdContainer">
+
+        <div class="gallery">
+            <div class="photo">
+                <div class="photo-container">
+                    <img src="../images/DJ AP PRESS-PIC_24-3.png" alt="Foto 1" class="thumbnail">
+                </div>
+                <a href="../images/DJ AP PRESS-PIC_24-3.png" download="DJ AP PIC 1" class="download-btn">Download</a>
+            </div>
+            <div class="photo">
+                <div class="photo-container">
+                    <img src="../images/IMG-20240702-WA0017.jpg" alt="Foto 2" class="thumbnail">
+                </div>
+                <a href="../images/foto2.jpg" download="DJ AP PIC 2" class="download-btn">Download</a>
+            </div>
+            <div class="photo">
+                <div class="photo-container">
+                    <img src="../images/IMG_0156-08.jpg" alt="Foto 3" class="thumbnail">
+                </div>
+                <a href="../images/IMG_0156-08.jpg" download="DJ AP PIC 3" class="download-btn">Download</a>
+            </div>
+            <div class="photo">
+                <div class="photo-container">
+                    <img src="../images/DJAPDVJ-14.jpg" alt="Foto 1" class="thumbnail">
+                </div>
+                <a href="../images/DJAPDVJ-14.jpg" download="DJ AP PIC 4" class="download-btn">Download</a>
+            </div>
+            <div class="photo">
+                <div class="photo-container">
+                    <img src="../images/DJAPDVJ-6.jpg" alt="Foto 1" class="thumbnail">
+                </div>
+                <a href="../images/DJAPDVJ-6.jpg" download="DJ AP PIC 5" class="download-btn">Download</a>
+            </div>
+            <div class="photo">
+                <div class="photo-container">
+                    <img src="../images/IMG-20240702-WA0014.jpg" alt="Foto 1" class="thumbnail">
+                </div>
+                <a href="../images/IMG-20240702-WA0014.jpg" download="DJ AP PIC 6" class="download-btn">Download</a>
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-img" id="lightbox-img" alt="Vergrote Foto">
+        </div>
+    </div>
+
+
+
+
+
+    <!-- CONTACT -->
+    <h1 id="contact">Contacteer ons</h1>
+    <div class="containerContact">
+        <p>We horen graag van je! Neem contact op via e-mail of Instagram.</p>
+        
+        <div class="contact-links">
+            <div class="contact-buttons">
+                <div class="contact-item">
+                    <a href="mailto:bookings.DJAP@gmail.com" class="contact-btn email-btn">Stuur een e-mail</a>
+                    <p class="mailAdres">bookings.DJAP@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <a href="https://instagram.com/direct/t/axel_pauwels_" target="_blank" class="contact-btn instagram-btn">Stuur een DM op Instagram</a>
+                    <p class="instagram">@axel_pauwels_</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="containerContactForm">
+            <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="8769d349-24ec-4686-8edc-43597b971c22">
+        
+            <p class="formNaam">Voornaam:</p>
+            <input type="text" name="naam" required>
+            <p class="formNaam">Achternaam:</p>
+            <input type="text" name="achternaam" required>
+            <p class="formNaam">Email-adres:</p>
+            <input type="email" name="email" required>
+            <p class="formNaam">Bericht</p>
+            <textarea name="message" required></textarea>
+            
+            <button type="submit">Verzend</button>
+          </form>
+        </div>
+
+    </div>
+
+
+    <!-- GEGEVENS -->
+    <h1>Gegevens</h1>
+    <div class="gegevens">
+        <div>
+            <p>Ondernemingsnummer: 1004.982.752</p>
+            <p>Verhuurlocatie: Schoten</p>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#" class="actief">Home DJ AP</a>
+            <a href="index.html#info">Info</a>
+            <a href="index.html#referenties">Referenties</a>
+            <a href="index.html#pictures">Pictures</a>
+            <a href="index.html#contact">Contact</a>
+            <!-- <a href="merch/">Merch</a> -->
+            <a href="ap-rental/">Home AP Rental</a>
+            <a href="ap-rental/licht/">Licht</a>
+            <a href="ap-rental/lichtsets/">Lichtsets</a>
+            <a href="ap-rental/speakersets/">Geluid</a>
+            <a href="ap-rental/sfx/">SFX</a>
+            <a class="algemene-voorwaarden" href="ap-rental/algemene-voorwaarden/">algemene voorwaarden</a>
+        </div>
+
+        <div class="footer-center">
+            <p>DJ AP - AP RENTAL</p>
+            <p>© 2024</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/axel_pauwels_" target="_blank">Instagram</a>
+            <a href="https://soundcloud.com/axelpauwels" target="_blank">SoundCloud</a>
+            <a href="https://vi.be/platform/DJAP" target="_blank">vi.be</a>
+            <a href="mailto:bookings.DJAP@gmail.com">Mail</a>
+        </div>
+    
+
+    </footer>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-99WD9S1F82"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-99WD9S1F82');
+    </script>
+
 </body>
 </html>

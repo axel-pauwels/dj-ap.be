@@ -1,7 +1,9 @@
+/* Basisinstellingen */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
     font-family: 'CoFo Sans', sans-serif;
     background-color: #FFF;
 }
@@ -10,11 +12,11 @@ body {
 body, html {
     margin: 0;
     padding: 0;
-    min-height: 90vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
+    min-height: 100vh; /* Zorg ervoor dat de pagina minimaal de hoogte van het scherm heeft */
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
-
 
 header {
     display: flex;
@@ -37,197 +39,834 @@ header {
     font-size: 1.75em;
 }
 
-
-
-body {
-    margin-top: 6.5rem;
+.nav-links {
+    display: none;
 }
 
-
-
-.logo1 {
-    margin: 0 auto;               /* Zorgt ervoor dat logo1 in het midden staat */
+.nav-links ul {
     display: flex;
-    justify-content: center;       /* Zorgt dat de inhoud van logo1 in het midden wordt uitgelijnd */
-    align-items: center;
+    list-style-type: none;
+    gap: 1vw;
+    padding: 0;
+    margin: 0;
+    align-items: center;  /* Zorg ervoor dat de items verticaal gecentreerd zijn */
+    height: 100%;         /* Zorg ervoor dat de hoogte van de lijst de volledige header vult */
 }
 
-.logo1 a {
-    display: block;
-    width: 120px;                  /* Standaard breedte voor grotere schermen */
-    height: auto;
-    text-align: center;
+.nav-links a {
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;  /* Centreer de tekst in de links */
+    height: 100%;         /* Zorg ervoor dat de link de volledige hoogte van de header vult */
+    padding: 0 10px;      /* Voeg wat horizontale padding toe voor ruimte rondom de tekst */
 }
 
-.logo1 a img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
 }
 
-.logo2 a {
+.hamburger span {
     display: block;
-    width: auto;
-    height: 57.41px;
-    text-align: center;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Stijl voor de link rondom het logo */
+.logo a {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 270px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
 }
   
-.logo2 a img {
-    max-height: 100%;
-    height: auto;
-    display: block;
+  /* Stijl voor de afbeelding zelf */
+.logo a img {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
 }
 
 
-.logo2 {
+/* Stijl voor de link rondom het logo */
+.APRENTALLogo {
+    display: block;        /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
+    width: 100px;          /* Breedte van het logo */
+    height: auto;          /* Past zich aan de hoogte van de afbeelding aan */
+    text-align: center;    /* Centreert de inhoud in de link */
+}
+  
+  /* Stijl voor de afbeelding zelf */
+.APRENTALLogo {
+    max-width: 100%;       /* Past zich aan de breedte van het omhulsel aan */
+    height: auto;          /* Behoudt de aspect ratio */
+    display: block;        /* Zorgt ervoor dat er geen witruimte onder de afbeelding verschijnt */
+}
+
+
+
+
+
+
+.algemeneVoorwaarden a{
+    font-style: italic;
+}
+
+
+#fotos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 90vw;
+    margin-top: 120px;
+}
+
+/* Eerste rij met afbeeldingen */
+.eerste-rij {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.HOMEAfbeelding43 {
+    width: 22%;  /* Standaard: vier foto's naast elkaar */
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.HOMEAfbeelding34 {
+    width: 22%;  /* Standaard: vier foto's naast elkaar */
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact-text {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+
+
+/* Stijl voor de modal achtergrond */
+#modal {
+    display: none;                /* Standaard verborgen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);  /* Semi-transparante achtergrond */
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    cursor: pointer;
+}
+
+
+
+/* Slideshow */
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 120px;
+}
+
+.slideshow img {
+    max-width: 96%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+
+.container {
+    min-width: 75%;
+    margin: 20px auto;
+    padding: 0 20px;
+    background: #fff;
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    font-family: Ubuntu;
+    font-weight: 500;
+    scroll-margin-top: 80px; /* Pas de waarde aan op basis van je header hoogte */
+    padding-top: 2.5rem;
+}
+
+
+h2 {
+    color: #444;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+
+.containerInfo {
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    font-family: Ubuntu;
+    margin-bottom: 5rem;
+}
+
+
+.containerInfo p {
+    color: #555;
+    margin: 8px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.6rem;
+}
+
+
+
+.sections-container {
+    max-width: 70%;
     margin: 0 auto;
 }
 
+.section {
+    margin: 20px auto;
+    padding: 0 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Ubuntu;
+    background-color: #fff;
+}
 
 
-main.content {
-    display: flex;
-    flex-direction: column;
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 8px;
+    
+}
+
+.section li {
+    margin-bottom: 8px;
+    padding: 6px;
+}
+
+.section li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: white;
+    border-radius: 4px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.section li a:hover {
+    text-decoration: underline;
+    color: #222;
+}
+
+
+
+
+/*   ----- PICTURES -----   */
+
+#modal {
+    display: none;                /* Standaard verborgen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
     align-items: center;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.hoofdContainer {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
 }
 
-/* Stijl voor de foto-links */
-.image-links {
-    width: 70vw;
+
+.gallery {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.image-link img {
-    width: 100%;              /* Zorg dat de afbeelding de volledige breedte vult */
-    height: calc(70vw / 5);    /* Bereken de hoogte om de 5:1 verhouding te behouden */
-    object-fit: cover;         /* Zorg dat de afbeelding goed geschaald wordt zonder te vervormen */
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.image-link img:hover {
-    transform: scale(1.05);    /* Lichte zoom-in bij hover */
-}
-
-
-.image-links a:last-of-type {
-    margin-bottom: 2rem;
-}
-
-
-.image-link img {
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.container img {
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
 }
 
 
-
-
-
-.voorwaardenTekst {
+.photo {
     text-align: center;
-    padding: 1rem 0 1.5rem 0;
+    width: 30%;
 }
 
-.voorwaardenTekst a {
-    font-style: italic;
-    color: black;
+.photo-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #777;
+    color: #fff;
     text-decoration: none;
-    color: black;
-    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: ubuntu;
 }
 
-.voorwaardenTekst a:hover {
-    text-decoration: underline;  /* Onderstreping bij hover */
+.download-btn:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
 }
 
 
 
-/* Media query voor grotere schermen */
-@media (min-width: 768px) {
+/*   ----- CONTACT ----- */
+.containerContact{
+    padding-top: 2rem;
+    text-align: center;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.containerContact p:nth-child(1) {
+    margin-bottom: 1rem;
+}
+
+
+.containerContact .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.containerContact .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerContact .mailAdres, .instagram {
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    margin-top: .8rem;
+}
+
+
+.containerContact .contact-btn {
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.email-btn {
+    background-color: #777;
+}
+
+.email-btn:hover {
+    background-color: #0056b3;
+}
+
+.instagram-btn {
+    background-color: #777;
+}
+
+.instagram-btn:hover {
+    background-color: #c13545;
+}
+
+
+
+
+.containerContactForm {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 0 20px 0;
+  }
+  
+  .containerContactForm p {
+    margin: 10px 0 5px;
+    font-weight: 400;
+  }
+  
+  .containerContactForm label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .containerContactForm input[type="text"],
+  .containerContactForm input[type="email"],
+  .containerContactForm textarea,
+  .containerContactForm input[type="date"],
+  .containerContactForm select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .containerContactForm textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .containerContactForm input[type="radio"],
+  .containerContactForm input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .containerContactForm select {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 94%;
+  }
+  
+  .containerContactForm button {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .containerContactForm button:hover {
+    background-color: #474747;
+  }
+  
+  @media (max-width: 1100px) {
+    .containerContactForm {
+      padding: 10px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .containerContactForm {
+      padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .containerContactForm input[type="text"],
+    .containerContactForm input[type="email"],
+    .containerContactForm textarea,
+    .containerContactForm select {
+      width: 100%;
+    }
+  }
+
+
+  
+.gegevens {
+    margin-top: 16px;
+    gap: 50px;
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+
+.gegevens div {
+    justify-content: center;
+    align-items: center;
+}
+
+.gegevens div p {
+    line-height: 1.5rem;
+}
+
+
+/*   ----- TO TOP -----   */
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+}
+
+.to-top.visible {
+    display: block;
+}
+
+.to-top:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+@media (min-width: 868px) {
+    /* Toon de navigatielinks */
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    /* Verberg het hamburger menu */
+    .hamburger {
+        display: none;
+    }
+
+    /* Zorg dat de logo links staat en navigatielinks rechts */
     header {
         justify-content: space-between;
     }
 }
 
 /* Media query voor kleinere schermen */
-@media (max-width: 767px) {
+@media (max-width: 867px) {
+    /* Logo centreren */
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Uitlijnen hamburger icon naar rechts */
+    .hamburger {
+        position: absolute;
+        right: 20px;
+    }
+
+    /* Open het menu als het actief is */
+    .nav-links.active {
+        display: block;
+        position: fixed;
+        top: 70px;                     /* Plaatsing onder de header */
+        right: 0;
+        width: 300px;
+        background-color: #333;
+        padding: 0 0;
+        text-align: right;
+        border-radius: 4px 0 0 6px;
+        box-shadow: -4px 0 8px rgba(1, 0, 0, 0.2);
+    }
 
     
-    .image-links {
-        width: 80vw;
-        display: flex;
+    .nav-links li {
+        z-index: 50;
+        padding: 10px 20px;
+        border-bottom: 1px solid #444; /* Voeg onderlijnen toe */
+    }
+    
+    .nav-links li:last-of-type {
+        border-bottom: none;
+    }
+
+
+    .nav-links ul {
         flex-direction: column;
-        gap: 1rem;
-    }    
+        gap: 1px;
+    }
 
-
+    .slideshow{
+        height: auto;
+    }
 }
+
+
+
+/* Responsive opmaak */
+@media only screen and  (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and  (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1142px){
+    .containerInfo {
+        width: 80vw;
+    }
+    footer {
+        padding: 20px 10% 20px 5%;
+    }
+    .sections-container {
+        max-width: 90%;
+    }
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    .containerInfo {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    footer {
+        padding: 20px 7% 20px 7%;
+        height: fit-content;
+        gap: 0px;
+    }
+    .footer-links {
+        height: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        width: 100%;
+    }
+    .footer-links a:nth-child(3) {
+        grid-column: 1/2;
+    }
+}
+
 
 @media only screen and (max-width: 750px) {
     .containerInfo {
         width: 90%;
     }
-    
     .logo2 a {
         height: 7vw; /* Pas de hoogte aan voor een kleiner logo */
     }
-
-    .logo1 a {
-        width: 17vw;               /* Verklein de breedte voor kleinere schermen */
-        height: auto;
-    }
-
-    .logo2, .logo1 {
+    .logo2 {
         display: flex;
+        justify-content: center; /* Zorgt ervoor dat het logo in het midden staat */
     }
     .containerInfo {
         width: 95%;
     }
 }
 
-
-
 @media only screen and (max-width: 450px) {
-    .logo2, .logo1 {
+    .logo2 {
         display: flex;
+        justify-content: center;
     }
     .logo2 a {
-        height: 31px;
-    }
-
-    .logo1 a {
-        width: 76px;
-        height: auto;
+        height: 31px; /* Pas de hoogte aan voor een kleiner logo */
     }
 }
 
 
+/* PICTURES + CONTACT*/
 
-
-
-@media (max-width: 1200px) {
-    .image-link:nth-of-type(1) img {
-        content: url("../images/LICHT 2-1.png");
+@media (max-width: 700px) {
+    .hoofdContainer {
+        width: 100%;
     }
-    .image-link:nth-of-type(2) img {
-        content: url("../images/LICHTSETS 2-1.png");
+    .photo {
+        text-align: center;
+        width: 35%;
     }
-    .image-link:nth-of-type(3) img {
-        content: url("../images/SPEAKERSETS 2-1.png");
-    }
-    .image-link:nth-of-type(4) img {
-        content: url("../images/SFX 2-1.png");
-    }
-    .image-link:nth-of-type(5) img {
-        content: url("../images/TRUSS 2-1.png");
+    .containerContact{
+        width: 100%;
     }
 }
 
 
+@media (max-width: 500px) {
+    .hoofdContainer {
+        width: 100%;
+    }
+    .containerContact{
+        width: 100%;
+    }
+    .gallery{
+        gap: 0;
+    }
+    .photo {
+        text-align: center;
+        width: 70%;
+    }
+}
+
+
+/* Zorg ervoor dat de knoppen in een flex container zitten */
+.contact-buttons {
+    display: flex;
+    justify-content: space-between; /* Voor een spreiding van knoppen (indien ze naast elkaar staan) */
+}
+
+.contact-buttons a {
+    margin: 0; /* Optioneel, voor wat ruimte tussen de knoppen */
+}
+
+/* Mediaquery voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+    .contact-buttons {
+        flex-direction: column; /* Zet knoppen onder elkaar in plaats van naast elkaar */
+        align-items: center; /* Zorg ervoor dat de knoppen gecentreerd zijn */
+    }
+}
