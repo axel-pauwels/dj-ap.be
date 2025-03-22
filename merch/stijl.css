@@ -203,6 +203,11 @@ header {
 }
 
 
+.containerProduct .vlag:hover {
+    content: url('../images/DJ-AP_sweater-black-FRONT.png');
+}
+
+
 
 
 .productInfo {
